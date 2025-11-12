@@ -17,7 +17,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapsed, toggleCollapse }) => {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: <HomeIcon className="w-6 h-6" /> },
-    { id: 'Suppliers', label: 'Suppliers Dictionary', icon: <BuildingOfficeIcon className="w-6 h-6" /> },
+    { id: 'SupplierInfo', label: 'Supplier Info', icon: <BuildingOfficeIcon className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
   ];
 

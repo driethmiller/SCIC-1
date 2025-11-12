@@ -7,7 +7,6 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
 // import ContractsView from './views/ContractsView';
-// import SuppliersView from './views/SuppliersView';
 // import DashboardView from './views/DashboardView';
 // import { ViewType, ContractAward } from './types';
 
@@ -53,12 +52,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
 };
 
 const App: React.FC = () => {
-  const [activeView, setActiveView] = useState<ViewType>('Suppliers');
+  const [activeView, setActiveView] = useState<ViewType>('TravelAdvisories');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(window.innerWidth < 1024);
 
   const renderView = () => {
     switch (activeView) {
-      case 'Suppliers':
+      case 'SupplierInfo':
         return <SupplierCardView />;
       case 'TravelAdvisories':
         return <TravelAdvisoriesView />;
@@ -66,9 +65,6 @@ const App: React.FC = () => {
       //   return <DashboardView />;
       // case 'contracts':
       //   return <ContractsView />;
-      // case 'suppliers':
-      //   return <SuppliersView />;
-
       // case 'awards':
       //   return <AwardsView />;
       // default:
@@ -94,7 +90,7 @@ const App: React.FC = () => {
   );
 };
 
-/*
+/* original text page of the app 
 const App: React.FC = () => {
   return (
     <main className="flex items-center justify-center min-h-screen bg-gray-900 text-white">

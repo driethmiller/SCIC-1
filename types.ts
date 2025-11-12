@@ -1,4 +1,4 @@
-export type ViewType = 'dashboard' | 'Suppliers' | 'TravelAdvisories';
+export type ViewType = 'dashboard' | 'Suppliers' | 'SupplierInfo' | 'TravelAdvisories';
 
 export interface Supplier {
   SupplierNo: string;

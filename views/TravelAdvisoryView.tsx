@@ -63,8 +63,8 @@ const TravelAdvisoriesView: React.FC = () => {
             {levelInfo.text}
         </span>
     }},
-    { header: 'Details', accessor: 'details' },
     { header: 'Last Updated', accessor: 'lastUpdated' },
+    { header: 'Details', accessor: 'details' },
   ];
 
   return (

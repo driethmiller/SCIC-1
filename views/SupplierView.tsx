@@ -28,11 +28,6 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => {
   return (
     <div className="relative mb-6">
-      <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-800">Search Basic Supplier Information</h2>
-        </div>
-      </div>
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg className="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -40,7 +35,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
       </div>
       <input
         type="text"
-        placeholder="Search by supplier name / number / address / CAGE code / status / UEI / zip / postal code"
+        placeholder="Search by supplier name / number / address, CAGE code / status, UEI, and zip / postal code"
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
         className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -50,7 +45,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
 };
 
 
-const SupplierCardView: React.FC = () => {
+const SupplierView: React.FC = () => {
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
   const [totalCount, setTotalCount] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -96,35 +91,38 @@ const SupplierCardView: React.FC = () => {
   const totalPages = useMemo(() => Math.ceil(totalCount / PAGE_SIZE), [totalCount]);
 
   return (
-    <div className="space-y-6">
-      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
+      <Header />
+      <main className="container mx-auto px-4 py-8">
+        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
-      {error && <ErrorMessage message={error} />}
+        {error && <ErrorMessage message={error} />}
 
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <>
-          {suppliers.length > 0 ? (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {suppliers.map((supplier) => (
-                  <SupplierCard key={supplier.SupplierNo} supplier={supplier} />
-                ))}
-              </div>
-                <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  onPageChange={setCurrentPage}
-                />
-            </>
-          ) : (
-            !error && <p className="text-center text-gray-400 text-xl mt-12">No suppliers found matching your criteria.</p>
-          )}
-        </>
-      )}
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <>
+            {suppliers.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {suppliers.map((supplier) => (
+                    <SupplierCard key={supplier.SupplierNo} supplier={supplier} />
+                  ))}
+                </div>
+                 <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={setCurrentPage}
+                  />
+              </>
+            ) : (
+              !error && <p className="text-center text-gray-400 text-xl mt-12">No suppliers found matching your criteria.</p>
+            )}
+          </>
+        )}
+      </main>
     </div>
   );
 };
 
-export default SupplierCardView;
+export default SupplierView;
