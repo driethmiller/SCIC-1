@@ -1,0 +1,1191 @@
+
+[
+  {
+    "country": "Afghanistan",
+    "level": 4,
+    "details": "Do not travel to Afghanistan due to armed conflict, civil unrest, crime, terrorism, and kidnapping. On August 31, 2021, the U.S. Embassy in Kabul suspended all operations.",
+    "lastUpdated": "2024-01-17"
+  },
+  {
+    "country": "Albania",
+    "level": 1,
+    "details": "Exercise normal precautions in Albania.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Algeria",
+    "level": 2,
+    "details": "Exercise increased caution in Algeria due to terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-24"
+  },
+  {
+    "country": "Andorra",
+    "level": 1,
+    "details": "Exercise normal precautions in Andorra.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Angola",
+    "level": 2,
+    "details": "Exercise increased caution in Angola due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "level": 1,
+    "details": "Exercise normal precautions in Antigua and Barbuda.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Argentina",
+    "level": 1,
+    "details": "Exercise normal precautions in Argentina.",
+    "lastUpdated": "2023-11-09"
+  },
+  {
+    "country": "Armenia",
+    "level": 2,
+    "details": "Exercise increased caution in Armenia due to armed conflict. Some areas have increased risk.",
+    "lastUpdated": "2023-10-13"
+  },
+  {
+    "country": "Australia",
+    "level": 1,
+    "details": "Exercise normal precautions in Australia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Austria",
+    "level": 2,
+    "details": "Exercise increased caution in Austria due to terrorism.",
+    "lastUpdated": "2023-11-21"
+  },
+  {
+    "country": "Azerbaijan",
+    "level": 2,
+    "details": "Exercise increased caution in Azerbaijan due to terrorism concerns and armed conflict. Some areas have increased risk.",
+    "lastUpdated": "2023-09-20"
+  },
+  {
+    "country": "The Bahamas",
+    "level": 2,
+    "details": "Exercise increased caution in The Bahamas due to crime.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Bahrain",
+    "level": 2,
+    "details": "Exercise increased caution in Bahrain due to terrorism.",
+    "lastUpdated": "2023-12-19"
+  },
+  {
+    "country": "Bangladesh",
+    "level": 2,
+    "details": "Exercise increased caution in Bangladesh due to crime, terrorism, and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Barbados",
+    "level": 1,
+    "details": "Exercise normal precautions in Barbados.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Belarus",
+    "level": 4,
+    "details": "Do not travel to Belarus due to the arbitrary enforcement of laws, the risk of detention, the Russian military attack on neighboring Ukraine, and the buildup of Russian military in Belarus along the border with Ukraine.",
+    "lastUpdated": "2023-10-23"
+  },
+  {
+    "country": "Belgium",
+    "level": 2,
+    "details": "Exercise increased caution in Belgium due to terrorism.",
+    "lastUpdated": "2023-10-18"
+  },
+  {
+    "country": "Belize",
+    "level": 2,
+    "details": "Exercise increased caution in Belize due to crime.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Benin",
+    "level": 3,
+    "details": "Reconsider travel to Benin due to crime, kidnapping, and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2024-03-27"
+  },
+  {
+    "country": "Bermuda",
+    "level": 1,
+    "details": "Exercise normal precautions in Bermuda.",
+    "lastUpdated": "2024-03-01"
+  },
+  {
+    "country": "Bhutan",
+    "level": 1,
+    "details": "Exercise normal precautions in Bhutan.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Bolivia",
+    "level": 2,
+    "details": "Exercise increased caution in Bolivia due to civil unrest. Some areas have increased risk.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "level": 2,
+    "details": "Exercise increased caution in Bosnia and Herzegovina due to terrorism and land mines.",
+    "lastUpdated": "2023-08-23"
+  },
+  {
+    "country": "Botswana",
+    "level": 1,
+    "details": "Exercise normal precautions in Botswana.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Brazil",
+    "level": 2,
+    "details": "Exercise increased caution in Brazil due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Brunei",
+    "level": 1,
+    "details": "Exercise normal precautions in Brunei.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Bulgaria",
+    "level": 1,
+    "details": "Exercise normal precautions in Bulgaria.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Burkina Faso",
+    "level": 4,
+    "details": "Do not travel to Burkina Faso due to terrorism, crime, and kidnapping.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Burma (Myanmar)",
+    "level": 4,
+    "details": "Do not travel to Burma (Myanmar) due to civil unrest, armed conflict, and arbitrary enforcement of local laws. Reconsider travel to Burma (Myanmar) due to wrongful detentions.",
+    "lastUpdated": "2024-01-23"
+  },
+  {
+    "country": "Burundi",
+    "level": 3,
+    "details": "Reconsider travel to Burundi due to crime, health, and political violence. Some areas have increased risk.",
+    "lastUpdated": "2024-01-09"
+  },
+  {
+    "country": "Cabo Verde",
+    "level": 1,
+    "details": "Exercise normal precautions in Cabo Verde.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Cambodia",
+    "level": 1,
+    "details": "Exercise normal precautions in Cambodia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Cameroon",
+    "level": 3,
+    "details": "Reconsider travel to Cameroon due to crime and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2023-11-20"
+  },
+  {
+    "country": "Canada",
+    "level": 1,
+    "details": "Exercise normal precautions in Canada.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Central African Republic",
+    "level": 4,
+    "details": "Do not travel to the Central African Republic (CAR) due to crime, civil unrest, and kidnapping.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Chad",
+    "level": 3,
+    "details": "Reconsider travel to Chad due to crime, terrorism, civil unrest, and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2024-04-12"
+  },
+  {
+    "country": "Chile",
+    "level": 2,
+    "details": "Exercise increased caution in Chile due to crime and civil unrest.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "China",
+    "level": 3,
+    "details": "Reconsider travel to Mainland China due to the arbitrary enforcement of local laws, including in relation to exit bans, and the risk of wrongful detentions.",
+    "lastUpdated": "2023-09-01"
+  },
+  {
+    "country": "Colombia",
+    "level": 3,
+    "details": "Reconsider travel to Colombia due to crime and terrorism. Exercise increased caution in Colombia due to civil unrest and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2024-03-27"
+  },
+  {
+    "country": "Comoros",
+    "level": 2,
+    "details": "Exercise increased caution in Comoros due to crime and civil unrest.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Congo, Democratic Republic of the",
+    "level": 3,
+    "details": "Reconsider travel to the Democratic Republic of the Congo (DRC) due to crime and civil unrest. Some areas have increased risk.",
+    "lastUpdated": "2024-02-12"
+  },
+  {
+    "country": "Congo, Republic of the",
+    "level": 2,
+    "details": "Exercise increased caution in the Republic of the Congo due to crime and civil unrest. Some areas have increased risk.",
+    "lastUpdated": "2024-03-12"
+  },
+  {
+    "country": "Costa Rica",
+    "level": 2,
+    "details": "Exercise increased caution in Costa Rica due to crime.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Cote d'Ivoire",
+    "level": 2,
+    "details": "Exercise increased caution in Cote d'Ivoire due to crime and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Croatia",
+    "level": 1,
+    "details": "Exercise normal precautions in Croatia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Cuba",
+    "level": 2,
+    "details": "Exercise increased caution in Cuba due to demonstrable risk to safety and security.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Curacao",
+    "level": 1,
+    "details": "Exercise normal precautions in Curacao.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Cyprus",
+    "level": 1,
+    "details": "Exercise normal precautions in Cyprus.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Czech Republic",
+    "level": 1,
+    "details": "Exercise normal precautions in the Czech Republic.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Denmark",
+    "level": 2,
+    "details": "Exercise increased caution in Denmark due to terrorism.",
+    "lastUpdated": "2023-08-16"
+  },
+  {
+    "country": "Djibouti",
+    "level": 2,
+    "details": "Exercise increased caution in Djibouti due to terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Dominica",
+    "level": 1,
+    "details": "Exercise normal precautions in Dominica.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Dominican Republic",
+    "level": 2,
+    "details": "Exercise increased caution in the Dominican Republic due to crime.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Ecuador",
+    "level": 2,
+    "details": "Exercise increased caution in Ecuador due to civil unrest, crime, and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2024-02-28"
+  },
+  {
+    "country": "Egypt",
+    "level": 3,
+    "details": "Reconsider travel to Egypt due to terrorism. Exercise increased caution in Egypt due to the Embassy’s limited ability to assist dual national U.S.-Egyptian citizens who are arrested or detained. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "El Salvador",
+    "level": 3,
+    "details": "Reconsider travel to El Salvador due to crime.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Equatorial Guinea",
+    "level": 1,
+    "details": "Exercise normal precautions in Equatorial Guinea.",
+    "lastUpdated": "2023-10-18"
+  },
+  {
+    "country": "Eritrea",
+    "level": 2,
+    "details": "Exercise increased caution in Eritrea due to travel restrictions, limited consular assistance, and landmines. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Estonia",
+    "level": 1,
+    "details": "Exercise normal precautions in Estonia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Eswatini (Swaziland)",
+    "level": 2,
+    "details": "Exercise increased caution in Eswatini due to crime and civil unrest.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Ethiopia",
+    "level": 3,
+    "details": "Reconsider travel to Ethiopia due to arbitrary detention, kidnapping, and wrongful detentions. Some areas have increased risk.",
+    "lastUpdated": "2024-03-22"
+  },
+  {
+    "country": "Fiji",
+    "level": 1,
+    "details": "Exercise normal precautions in Fiji.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Finland",
+    "level": 1,
+    "details": "Exercise normal precautions in Finland.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "France",
+    "level": 2,
+    "details": "Exercise increased caution in France due to terrorism and civil unrest.",
+    "lastUpdated": "2024-01-18"
+  },
+  {
+    "country": "Gabon",
+    "level": 2,
+    "details": "Exercise increased caution in Gabon due to crime.",
+    "lastUpdated": "2024-03-05"
+  },
+  {
+    "country": "The Gambia",
+    "level": 2,
+    "details": "Exercise increased caution in The Gambia due to crime.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Georgia",
+    "level": 1,
+    "details": "Exercise normal precautions in Georgia. Some areas have increased risk.",
+    "lastUpdated": "2023-08-28"
+  },
+  {
+    "country": "Germany",
+    "level": 2,
+    "details": "Exercise increased caution in Germany due to terrorism.",
+    "lastUpdated": "2023-11-21"
+  },
+  {
+    "country": "Ghana",
+    "level": 2,
+    "details": "Exercise increased caution in Ghana due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-04-12"
+  },
+  {
+    "country": "Greece",
+    "level": 1,
+    "details": "Exercise normal precautions in Greece.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Grenada",
+    "level": 1,
+    "details": "Exercise normal precautions in Grenada.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Guatemala",
+    "level": 3,
+    "details": "Reconsider travel to Guatemala due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Guinea",
+    "level": 3,
+    "details": "Reconsider travel to Guinea due to civil unrest. Some areas have increased risk.",
+    "lastUpdated": "2024-03-01"
+  },
+  {
+    "country": "Guinea-Bissau",
+    "level": 3,
+    "details": "Reconsider travel to Guinea-Bissau due to civil unrest. Some areas have increased risk.",
+    "lastUpdated": "2024-04-12"
+  },
+  {
+    "country": "Guyana",
+    "level": 2,
+    "details": "Exercise increased caution in Guyana due to crime.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Haiti",
+    "level": 4,
+    "details": "Do not travel to Haiti due to kidnapping, crime, civil unrest, and poor health care infrastructure.",
+    "lastUpdated": "2023-07-27"
+  },
+  {
+    "country": "Honduras",
+    "level": 3,
+    "details": "Reconsider travel to Honduras due to crime. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Hong Kong",
+    "level": 2,
+    "details": "Exercise increased caution in the Hong Kong SAR due to the arbitrary enforcement of local laws.",
+    "lastUpdated": "2023-09-01"
+  },
+  {
+    "country": "Hungary",
+    "level": 1,
+    "details": "Exercise normal precautions in Hungary.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Iceland",
+    "level": 1,
+    "details": "Exercise normal precautions in Iceland.",
+    "lastUpdated": "2024-01-18"
+  },
+  {
+    "country": "India",
+    "level": 2,
+    "details": "Exercise increased caution in India due to crime and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Indonesia",
+    "level": 2,
+    "details": "Exercise increased caution in Indonesia due to terrorism and natural disasters. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Iran",
+    "level": 4,
+    "details": "Do not travel to Iran due to the risk of kidnapping and the arbitrary arrest and detention of U.S. citizens.",
+    "lastUpdated": "2024-04-15"
+  },
+  {
+    "country": "Iraq",
+    "level": 4,
+    "details": "Do not travel to Iraq due to terrorism, kidnapping, armed conflict, civil unrest, and Mission Iraq’s limited capacity to provide support to U.S. citizens.",
+    "lastUpdated": "2023-10-22"
+  },
+  {
+    "country": "Ireland",
+    "level": 1,
+    "details": "Exercise normal precautions in Ireland.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Israel, the West Bank, and Gaza",
+    "level": 3,
+    "details": "Reconsider travel to Israel and the West Bank due to terrorism and civil unrest. Do not travel to Gaza due to terrorism, civil unrest, and armed conflict.",
+    "lastUpdated": "2024-04-16"
+  },
+  {
+    "country": "Italy",
+    "level": 2,
+    "details": "Exercise increased caution in Italy due to terrorism.",
+    "lastUpdated": "2023-12-07"
+  },
+  {
+    "country": "Jamaica",
+    "level": 3,
+    "details": "Reconsider travel to Jamaica due to crime.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Japan",
+    "level": 1,
+    "details": "Exercise normal precautions in Japan.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Jordan",
+    "level": 2,
+    "details": "Exercise increased caution in Jordan due to terrorism. Some areas have increased risk.",
+    "lastUpdated": "2024-04-16"
+  },
+  {
+    "country": "Kazakhstan",
+    "level": 1,
+    "details": "Exercise normal precautions in Kazakhstan.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Kenya",
+    "level": 2,
+    "details": "Exercise increased caution in Kenya due to crime, terrorism, civil unrest, and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Kiribati",
+    "level": 1,
+    "details": "Exercise normal precautions in Kiribati.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Kosovo",
+    "level": 2,
+    "details": "Exercise increased caution in Kosovo due to terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-10-02"
+  },
+  {
+    "country": "Kuwait",
+    "level": 1,
+    "details": "Exercise normal precautions in Kuwait.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Kyrgyz Republic",
+    "level": 1,
+    "details": "Exercise normal precautions in the Kyrgyz Republic. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Laos",
+    "level": 1,
+    "details": "Exercise normal precautions in Laos. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Latvia",
+    "level": 1,
+    "details": "Exercise normal precautions in Latvia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Lebanon",
+    "level": 4,
+    "details": "Do not travel to Lebanon due to the unpredictable security situation. Reconsider travel to Lebanon due to the risk of armed conflict. Some areas have increased risk.",
+    "lastUpdated": "2024-04-12"
+  },
+  {
+    "country": "Lesotho",
+    "level": 2,
+    "details": "Exercise increased caution in Lesotho due to crime.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Liberia",
+    "level": 2,
+    "details": "Exercise increased caution in Liberia due to crime and civil unrest.",
+    "lastUpdated": "2024-01-22"
+  },
+  {
+    "country": "Libya",
+    "level": 4,
+    "details": "Do not travel to Libya due to crime, terrorism, civil unrest, kidnapping, and armed conflict.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Liechtenstein",
+    "level": 1,
+    "details": "Exercise normal precautions in Liechtenstein.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Lithuania",
+    "level": 1,
+    "details": "Exercise normal precautions in Lithuania.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Luxembourg",
+    "level": 1,
+    "details": "Exercise normal precautions in Luxembourg.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Macau",
+    "level": 2,
+    "details": "Exercise increased caution in the Macau SAR due to the arbitrary enforcement of local laws.",
+    "lastUpdated": "2023-09-01"
+  },
+  {
+    "country": "Madagascar",
+    "level": 2,
+    "details": "Exercise increased caution in Madagascar due to crime and civil unrest.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Malawi",
+    "level": 2,
+    "details": "Exercise increased caution in Malawi due to crime and civil unrest.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Malaysia",
+    "level": 1,
+    "details": "Exercise normal precautions in Malaysia. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Maldives",
+    "level": 2,
+    "details": "Exercise increased caution in Maldives due to terrorism.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Mali",
+    "level": 4,
+    "details": "Do not travel to Mali due to crime, terrorism, and kidnapping.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Malta",
+    "level": 1,
+    "details": "Exercise normal precautions in Malta.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Marshall Islands",
+    "level": 1,
+    "details": "Exercise normal precautions in the Marshall Islands.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Mauritania",
+    "level": 3,
+    "details": "Reconsider travel to Mauritania due to crime and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Mauritius",
+    "level": 1,
+    "details": "Exercise normal precautions in Mauritius.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Mexico",
+    "level": 2,
+    "details": "Exercise Increased Caution When Traveling to Mexico due to crime and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2023-08-17"
+  },
+  {
+    "country": "Micronesia, Federated States of",
+    "level": 1,
+    "details": "Exercise normal precautions in the Federated States of Micronesia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Moldova",
+    "level": 1,
+    "details": "Exercise normal precautions in Moldova. Some areas have increased risk.",
+    "lastUpdated": "2023-08-28"
+  },
+  {
+    "country": "Monaco",
+    "level": 1,
+    "details": "Exercise normal precautions in Monaco.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Mongolia",
+    "level": 1,
+    "details": "Exercise normal precautions in Mongolia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Montenegro",
+    "level": 1,
+    "details": "Exercise normal precautions in Montenegro.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Morocco",
+    "level": 2,
+    "details": "Exercise increased caution in Morocco due to terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-10-11"
+  },
+  {
+    "country": "Mozambique",
+    "level": 2,
+    "details": "Exercise increased caution in Mozambique due to health issues, crime and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Namibia",
+    "level": 1,
+    "details": "Exercise normal precautions in Namibia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Nauru",
+    "level": 1,
+    "details": "Exercise normal precautions in Nauru.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Nepal",
+    "level": 2,
+    "details": "Exercise increased caution in Nepal due to the potential for isolated political violence. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Netherlands",
+    "level": 2,
+    "details": "Exercise increased caution in the Netherlands due to terrorism.",
+    "lastUpdated": "2023-12-14"
+  },
+  {
+    "country": "New Zealand",
+    "level": 1,
+    "details": "Exercise normal precautions in New Zealand.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Nicaragua",
+    "level": 3,
+    "details": "Reconsider travel to Nicaragua due to arbitrary enforcement of laws, the risk of wrongful detention, and limited healthcare availability.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Niger",
+    "level": 4,
+    "details": "Do not travel to Niger due to crime, terrorism, and kidnapping.",
+    "lastUpdated": "2023-08-02"
+  },
+  {
+    "country": "Nigeria",
+    "level": 3,
+    "details": "Reconsider travel to Nigeria due to crime, terrorism, civil unrest, kidnapping, and armed gangs. Some areas have increased risk.",
+    "lastUpdated": "2023-09-29"
+  },
+  {
+    "country": "North Korea (Democratic People's Republic of Korea)",
+    "level": 4,
+    "details": "Do not travel to North Korea due to the serious risk of arrest and long-term detention of U.S. nationals.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "North Macedonia",
+    "level": 1,
+    "details": "Exercise normal precautions in North Macedonia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Norway",
+    "level": 2,
+    "details": "Exercise increased caution in Norway due to terrorism.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Oman",
+    "level": 2,
+    "details": "Exercise increased caution in Oman due to terrorism and armed conflict. Some areas have increased risk.",
+    "lastUpdated": "2023-12-19"
+  },
+  {
+    "country": "Pakistan",
+    "level": 3,
+    "details": "Reconsider travel to Pakistan due to terrorism and sectarian violence. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Palau",
+    "level": 1,
+    "details": "Exercise normal precautions in Palau.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Panama",
+    "level": 2,
+    "details": "Exercise increased caution in Panama due to crime. Some areas have increased risk.",
+    "lastUpdated": "2023-10-25"
+  },
+  {
+    "country": "Papua New Guinea",
+    "level": 3,
+    "details": "Reconsider travel to Papua New Guinea due to crime, civil unrest, and piracy. Some areas have increased risk.",
+    "lastUpdated": "2024-01-18"
+  },
+  {
+    "country": "Paraguay",
+    "level": 2,
+    "details": "Exercise increased caution in Paraguay due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Peru",
+    "level": 2,
+    "details": "Exercise increased caution in Peru due to crime and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Philippines",
+    "level": 2,
+    "details": "Exercise increased caution in the Philippines due to crime, terrorism, civil unrest, and kidnapping. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Poland",
+    "level": 1,
+    "details": "Exercise normal precautions in Poland.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Portugal",
+    "level": 1,
+    "details": "Exercise normal precautions in Portugal.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Qatar",
+    "level": 1,
+    "details": "Exercise normal precautions in Qatar.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Romania",
+    "level": 1,
+    "details": "Exercise normal precautions in Romania.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Russia",
+    "level": 4,
+    "details": "Do not travel to Russia due to the unpredictable consequences of the unprovoked full-scale invasion of Ukraine by Russian military forces, the potential for harassment and the singling out of U.S. citizens for detention by Russian government security officials, the arbitrary enforcement of local law, limited flights into and out of Russia, the Embassy’s limited ability to assist U.S. citizens in Russia, and the possibility of terrorism.",
+    "lastUpdated": "2024-03-23"
+  },
+  {
+    "country": "Rwanda",
+    "level": 1,
+    "details": "Exercise normal precautions in Rwanda. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Samoa",
+    "level": 1,
+    "details": "Exercise normal precautions in Samoa.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "San Marino",
+    "level": 1,
+    "details": "Exercise normal precautions in San Marino.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Sao Tome and Principe",
+    "level": 1,
+    "details": "Exercise normal precautions in Sao Tome and Principe.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Saudi Arabia",
+    "level": 3,
+    "details": "Reconsider travel to Saudi Arabia due to the threat of missile and drone attacks. Some areas have increased risk.",
+    "lastUpdated": "2023-12-19"
+  },
+  {
+    "country": "Senegal",
+    "level": 2,
+    "details": "Exercise increased caution in Senegal due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-02-12"
+  },
+  {
+    "country": "Serbia",
+    "level": 1,
+    "details": "Exercise normal precautions in Serbia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Seychelles",
+    "level": 1,
+    "details": "Exercise normal precautions in Seychelles.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Sierra Leone",
+    "level": 2,
+    "details": "Exercise increased caution in Sierra Leone due to crime and civil unrest.",
+    "lastUpdated": "2024-04-12"
+  },
+  {
+    "country": "Singapore",
+    "level": 1,
+    "details": "Exercise normal precautions in Singapore.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Slovakia",
+    "level": 1,
+    "details": "Exercise normal precautions in Slovakia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Slovenia",
+    "level": 1,
+    "details": "Exercise normal precautions in Slovenia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Solomon Islands",
+    "level": 1,
+    "details": "Exercise normal precautions in the Solomon Islands.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Somalia",
+    "level": 4,
+    "details": "Do not travel to Somalia due to crime, terrorism, civil unrest, health issues, kidnapping, and piracy.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "South Africa",
+    "level": 2,
+    "details": "Exercise increased caution in South Africa due to crime and civil unrest.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "South Korea (Republic of Korea)",
+    "level": 1,
+    "details": "Exercise normal precautions in South Korea.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "South Sudan",
+    "level": 4,
+    "details": "Do not travel to South Sudan due to crime, kidnapping, and armed conflict.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Spain",
+    "level": 2,
+    "details": "Exercise increased caution in Spain due to terrorism and civil unrest.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Sri Lanka",
+    "level": 2,
+    "details": "Exercise increased caution in Sri Lanka due to terrorism.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "St. Kitts and Nevis",
+    "level": 1,
+    "details": "Exercise normal precautions in St. Kitts and Nevis.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "St. Lucia",
+    "level": 1,
+    "details": "Exercise normal precautions in St. Lucia.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "St. Vincent and the Grenadines",
+    "level": 1,
+    "details": "Exercise normal precautions in St. Vincent and the Grenadines.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Sudan",
+    "level": 4,
+    "details": "Do not travel to Sudan due to armed conflict, civil unrest, crime, terrorism, and kidnapping.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Suriname",
+    "level": 1,
+    "details": "Exercise normal precautions in Suriname.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Sweden",
+    "level": 2,
+    "details": "Exercise increased caution in Sweden due to terrorism.",
+    "lastUpdated": "2023-09-01"
+  },
+  {
+    "country": "Switzerland",
+    "level": 1,
+    "details": "Exercise normal precautions in Switzerland.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Syria",
+    "level": 4,
+    "details": "Do not travel to Syria due to terrorism, civil unrest, kidnapping, armed conflict, and risk of unjust detention.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Taiwan",
+    "level": 1,
+    "details": "Exercise normal precautions in Taiwan.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Tajikistan",
+    "level": 2,
+    "details": "Exercise increased caution in Tajikistan due to terrorism, unexploded landmines, and the potential for political violence. Some areas have increased risk.",
+    "lastUpdated": "2023-08-01"
+  },
+  {
+    "country": "Tanzania",
+    "level": 2,
+    "details": "Exercise increased caution in Tanzania due to crime, terrorism, and targeting of LGBTI persons. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Thailand",
+    "level": 1,
+    "details": "Exercise normal precautions in Thailand. Some areas have increased risk.",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "country": "Timor-Leste",
+    "level": 2,
+    "details": "Exercise increased caution in Timor-Leste due to crime and civil unrest.",
+    "lastUpdated": "2024-03-27"
+  },
+  {
+    "country": "Togo",
+    "level": 3,
+    "details": "Reconsider travel to Togo due to crime and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Tonga",
+    "level": 1,
+    "details": "Exercise normal precautions in Tonga.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "level": 3,
+    "details": "Reconsider travel to Trinidad and Tobago due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Tunisia",
+    "level": 2,
+    "details": "Exercise increased caution in Tunisia due to terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Türkiye (Turkey)",
+    "level": 2,
+    "details": "Exercise increased caution when traveling to Türkiye due to terrorism and arbitrary detentions. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Turkmenistan",
+    "level": 2,
+    "details": "Exercise increased caution in Turkmenistan due to arbitrary enforcement of local laws and terrorism. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Tuvalu",
+    "level": 1,
+    "details": "Exercise normal precautions in Tuvalu.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Uganda",
+    "level": 3,
+    "details": "Reconsider travel to Uganda due to crime, terrorism, and anti-LGBTQI+ legislation. Some areas have increased risk.",
+    "lastUpdated": "2024-02-09"
+  },
+  {
+    "country": "Ukraine",
+    "level": 4,
+    "details": "Do not travel to Ukraine due to Russia’s full-scale invasion.",
+    "lastUpdated": "2024-02-20"
+  },
+  {
+    "country": "United Arab Emirates",
+    "level": 2,
+    "details": "Exercise increased caution in the United Arab Emirates due to the threat of missile or drone attacks.",
+    "lastUpdated": "2023-12-19"
+  },
+  {
+    "country": "United Kingdom",
+    "level": 2,
+    "details": "Exercise increased caution in the United Kingdom due to terrorism.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Uruguay",
+    "level": 2,
+    "details": "Exercise increased caution in Uruguay due to crime.",
+    "lastUpdated": "2024-05-15"
+  },
+  {
+    "country": "Uzbekistan",
+    "level": 1,
+    "details": "Exercise normal precautions in Uzbekistan. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Vanuatu",
+    "level": 1,
+    "details": "Exercise normal precautions in Vanuatu.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Venezuela",
+    "level": 4,
+    "details": "Do not travel to Venezuela due to crime, civil unrest, kidnapping, and the arbitrary enforcement of local laws. Reconsider travel due to wrongful detentions, terrorism, and poor health infrastructure.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Vietnam",
+    "level": 1,
+    "details": "Exercise normal precautions in Vietnam.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Yemen",
+    "level": 4,
+    "details": "Do not travel to Yemen due to terrorism, civil unrest, health risks, kidnapping, armed conflict, and landmines.",
+    "lastUpdated": "2023-07-26"
+  },
+  {
+    "country": "Zambia",
+    "level": 2,
+    "details": "Exercise increased caution in Zambia due to crime.",
+    "lastUpdated": "2024-04-22"
+  },
+  {
+    "country": "Zimbabwe",
+    "level": 2,
+    "details": "Exercise increased caution in Zimbabwe due to crime.",
+    "lastUpdated": "2024-04-22"
+  }
+]
