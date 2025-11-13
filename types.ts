@@ -1,4 +1,4 @@
-export type ViewType = 'dashboard' | 'Suppliers' | 'SupplierInfo' | 'TravelAdvisories';
+export type ViewType = 'dashboard' | 'Suppliers' | 'SupplierInfo' | 'TravelAdvisories' | 'RSSAdvisories';
 
 export interface Supplier {
   SupplierNo: string;
@@ -27,4 +27,13 @@ export interface TravelAdvisory {
   level: number;
   details: string;
   lastUpdated: string;
+}
+
+export interface RSSAdvisory {
+  id: string;
+  country: string;
+  link: string;
+  pubDate: string;
+  level: number;
+  levelDescription: string;
 }

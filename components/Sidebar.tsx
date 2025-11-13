@@ -19,6 +19,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapse
     { id: 'dashboard', label: 'Dashboard', icon: <HomeIcon className="w-6 h-6" /> },
     { id: 'SupplierInfo', label: 'Supplier Info', icon: <BuildingOfficeIcon className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
+    { id: 'RSSAdvisories', label: 'RSS Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
   ];
 
   return (

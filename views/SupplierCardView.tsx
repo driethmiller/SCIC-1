@@ -58,6 +58,9 @@ const SupplierCardView: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState<string>('');
+  const [allSuppliers, setAllSupports] = useState<Supplier[]>([]);
+  const [selectedLevel, setSelectedLevel] = useState<string>('all');
+  const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -92,6 +95,32 @@ const SupplierCardView: React.FC = () => {
   useEffect(() => {
     loadSuppliers();
   }, [loadSuppliers]);
+
+{/*
+  // Try filters
+  const filteredAndSortedAdvisories = useMemo(() => {
+    let result = [...allSuppliers];
+
+    if (selectedLevel !== 'all') {
+      result = result.filter(advisory => advisory.level === parseInt(selectedLevel, 10));
+    }
+
+    if (searchTerm) {
+      result = result.filter(advisory =>
+        advisory.country.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    result.sort((a, b) => {
+      const dateA = new Date(a.pubDate).getTime();
+      const dateB = new Date(b.pubDate).getTime();
+      return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
+    });
+
+    return result;
+  }, [searchTerm, selectedLevel, sortOrder, allSuppliers]);
+  // End-Try
+  */}
 
   const totalPages = useMemo(() => Math.ceil(totalCount / PAGE_SIZE), [totalCount]);
 

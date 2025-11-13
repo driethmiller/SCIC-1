@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { ViewType, Supplier } from './types';
-import SupplierCardView from './views/SupplierCardView';
-import TravelAdvisoriesView from './views/TravelAdvisoryView';
-
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
-// import ContractsView from './views/ContractsView';
-// import DashboardView from './views/DashboardView';
-// import { ViewType, ContractAward } from './types';
-
+import SupplierCardView from './views/SupplierCardView';
+import TravelAdvisoryView from './views/TravelAdvisoryView';
+import RSSAdvisoryCardView from './views/RSSAdvisoryCardView';
 
 // Loading Spinner Component defined within App.tsx
 const LoadingSpinner: React.FC = () => (
@@ -60,15 +56,9 @@ const App: React.FC = () => {
       case 'SupplierInfo':
         return <SupplierCardView />;
       case 'TravelAdvisories':
-        return <TravelAdvisoriesView />;
-      // case 'dashboard':
-      //   return <DashboardView />;
-      // case 'contracts':
-      //   return <ContractsView />;
-      // case 'awards':
-      //   return <AwardsView />;
-      // default:
-      //   return <DashboardView />;
+        return <TravelAdvisoryView />;
+      case 'RSSAdvisories':
+        return <RSSAdvisoryCardView />;
     }
   };
 

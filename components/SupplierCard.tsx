@@ -30,12 +30,12 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
       <div className="p-5 flex-grow flex flex-col">
         <div className="mb-4">
           <h3 className="text-lg font-bold text-blue-300 break-words">{supplier.SupplierName || 'No Name Provided'}</h3>
-          <p className="text-xs text-gray-400">Supplier No: {supplier.SupplierNo} || CAGE Status: {supplier.CAGEStatus.Description}</p>
+          <p className="text-xs text-gray-400">Supplier No: {supplier.SupplierNo} || UEI: {supplier.UEID}</p>
         </div>
 
         <div className="space-y-3 flex-grow mb-4">
-          {/* Row 1: Combined CAGE and UEID */}
-          {(supplier.CAGECodeConcat || supplier.UEID) && (
+          {/* Row 1: Combined CAGE and CAGE Status */}
+          {(supplier.CAGECodeConcat || supplier.CAGEStatus.Description) && (
             <div className="flex flex-wrap items-center text-sm gap-x-6 gap-y-2">
               {supplier.CAGECodeConcat && (
                 <div className="flex items-center">
@@ -44,15 +44,7 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
                   </span>
                   <span className="font-semibold text-gray-400 mr-2">CAGE:</span>
                   <span className="text-gray-200 break-words">{supplier.CAGECodeConcat}</span>
-                </div>
-              )}
-              {supplier.UEID && (
-                <div className="flex items-center">
-                  <span className="text-blue-400 mr-2 flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 21.75z" /></svg>
-                  </span>
-                  <span className="font-semibold text-gray-400 mr-2">UEID:</span>
-                  <span className="text-gray-200 break-words">{supplier.UEID}</span>
+                  <span className="text-gray-200 break-words">&nbsp;&nbsp;( {supplier.CAGEStatus.Description} )</span>                  
                 </div>
               )}
             </div>
