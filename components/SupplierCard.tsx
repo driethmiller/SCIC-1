@@ -1,5 +1,9 @@
 import React from 'react';
 import { Supplier } from '../types';
+import { HashtagIcon } from './icons/HashtagIcon';
+import { BarcodeIcon } from './icons/BarcodeIcon';
+import { IdentificationIcon } from './icons/IdentificationIcon';
+import { ShieldCheckIcon } from './icons/ShieldCheckIcon';
 
 interface SupplierCardProps {
   supplier: Supplier;
@@ -30,27 +34,10 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
       <div className="p-5 flex-grow flex flex-col">
         <div className="mb-4">
           <h3 className="text-lg font-bold text-blue-300 break-words">{supplier.SupplierName || 'No Name Provided'}</h3>
-          <p className="text-xs text-gray-400">Supplier No: {supplier.SupplierNo} || UEI: {supplier.UEID}</p>
+          <p className="text-xs text-gray-400">{supplier.SupplierNo}&nbsp;&nbsp;&nbsp;&nbsp;CAGE: {supplier.CAGECodeConcat} ( {supplier.CAGEStatus.Description} )&nbsp;&nbsp;&nbsp;&nbsp;UEI: {supplier.UEID}</p>
         </div>
 
         <div className="space-y-3 flex-grow mb-4">
-          {/* Row 1: Combined CAGE and CAGE Status */}
-          {(supplier.CAGECodeConcat || supplier.CAGEStatus.Description) && (
-            <div className="flex flex-wrap items-center text-sm gap-x-6 gap-y-2">
-              {supplier.CAGECodeConcat && (
-                <div className="flex items-center">
-                  <span className="text-blue-400 mr-2 flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                  </span>
-                  <span className="font-semibold text-gray-400 mr-2">CAGE:</span>
-                  <span className="text-gray-200 break-words">{supplier.CAGECodeConcat}</span>
-                  <span className="text-gray-200 break-words">&nbsp;&nbsp;( {supplier.CAGEStatus.Description} )</span>                  
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Row 2: Address */}
           <InfoRow 
             icon={<svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
             label="Address" 

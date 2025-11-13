@@ -1,11 +1,12 @@
 import React from 'react';
 import { ViewType } from '../types';
 import { DocumentTextIcon } from './icons/DocumentTextIcon';
-import { BuildingOfficeIcon } from './icons/BuildingOfficeIcon';
+import { ClipboardDocumentListIcon } from './icons/ClipboardDocumentListIcon';
 import { GlobeAltIcon } from './icons/GlobeAltIcon';
 import { HomeIcon } from './icons/HomeIcon';
 import { TrophyIcon } from './icons/TrophyIcon';
 import { ChevronDoubleLeftIcon } from './icons/ChevronDoubleLeftIcon';
+import { IdentificationIcon } from './icons/IdentificationIcon';
 
 interface SidebarProps {
   activeView: ViewType;
@@ -17,9 +18,11 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapsed, toggleCollapse }) => {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: <HomeIcon className="w-6 h-6" /> },
-    { id: 'SupplierInfo', label: 'Supplier Info', icon: <BuildingOfficeIcon className="w-6 h-6" /> },
-    { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
+    { id: 'SupplierInfo', label: 'Supplier Info', icon: <ClipboardDocumentListIcon className="w-6 h-6" /> },
     { id: 'RSSAdvisories', label: 'RSS Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
+    { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
+    { id: 'SupplierMock', label: 'Supplier Mock', icon: <DocumentTextIcon className="w-6 h-6" /> },
+    { id: 'SupplierTest', label: 'Supplier Test', icon: <IdentificationIcon className="w-6 h-6" /> },
   ];
 
   return (

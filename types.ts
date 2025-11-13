@@ -1,4 +1,4 @@
-export type ViewType = 'dashboard' | 'Suppliers' | 'SupplierInfo' | 'TravelAdvisories' | 'RSSAdvisories';
+export type ViewType = 'dashboard' | 'Suppliers' | 'SupplierInfo' | 'TravelAdvisories' | 'RSSAdvisories' | 'SupplierMock' | 'SupplierTest';
 
 export interface Supplier {
   SupplierNo: string;
@@ -36,4 +36,18 @@ export interface RSSAdvisory {
   pubDate: string;
   level: number;
   levelDescription: string;
+}
+
+export interface SupplierMock {
+  cageCode: string;
+  companyName: string;
+  address: string;
+  city: string;
+  province: string;
+  zip: string;
+  country: string;
+  status: 'Active' | 'Inactive';
+  // fix: Add optional lat and lon properties for mapping.
+  lat?: number;
+  lon?: number;
 }

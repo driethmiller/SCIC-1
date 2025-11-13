@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useMemo } from 'react';
-import { TravelAdvisory, Supplier } from '../types';
+// fix: Import SupplierMock as the supplier data for the map has a different structure.
+import { TravelAdvisory, SupplierMock } from '../types';
 import L from 'leaflet';
 import { worldGeoJson } from '../data/world-geojson';
 
 interface InteractiveWorldMapProps {
   advisories: TravelAdvisory[];
-  suppliers: Supplier[];
+  // fix: Use SupplierMock type for suppliers to match the data from mockDataService.
+  suppliers: SupplierMock[];
   showSuppliers: boolean;
 }
 
@@ -102,6 +104,7 @@ const InteractiveWorldMap: React.FC<InteractiveWorldMapProps> = ({ advisories, s
 
         if (showSuppliers) {
             suppliers.forEach(supplier => {
+                // fix: Use properties from SupplierMock type
                 if (supplier.lat && supplier.lon) {
                     const marker = L.marker([supplier.lat, supplier.lon], { icon: supplierIcon });
                     const popupContent = `

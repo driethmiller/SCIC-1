@@ -5,14 +5,14 @@ import { PAGE_SIZE } from '../constants';
 import SupplierCard from '../components/SupplierCard';
 import Pagination from '../components/Pagination';
 
-// Loading Spinner Component defined within App.tsx
+// Loading Spinner Component
 const LoadingSpinner: React.FC = () => (
   <div className="flex justify-center items-center h-full my-16">
     <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
   </div>
 );
 
-// Error Message Component defined within App.tsx
+// Error Message Component
 const ErrorMessage: React.FC<{ message: string }> = ({ message }) => (
   <div className="bg-red-900 border border-red-600 text-red-100 px-4 py-3 rounded-lg relative my-4" role="alert">
     <strong className="font-bold">Error:</strong>
@@ -20,7 +20,7 @@ const ErrorMessage: React.FC<{ message: string }> = ({ message }) => (
   </div>
 );
 
-// SearchBar Component defined within App.tsx
+// SearchBar Component
 interface SearchBarProps {
   searchTerm: string;
   onSearchChange: (term: string) => void;
@@ -97,7 +97,7 @@ const SupplierCardView: React.FC = () => {
   }, [loadSuppliers]);
 
 {/*
-  // Try filters
+  // Try filters example of RSSAdvisory
   const filteredAndSortedAdvisories = useMemo(() => {
     let result = [...allSuppliers];
 

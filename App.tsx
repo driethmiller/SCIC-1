@@ -6,6 +6,8 @@ import Sidebar from './components/Sidebar';
 import SupplierCardView from './views/SupplierCardView';
 import TravelAdvisoryView from './views/TravelAdvisoryView';
 import RSSAdvisoryCardView from './views/RSSAdvisoryCardView';
+import SupplierView from './views/SupplierView';
+import SupplierTestView from './views/SupplierTestView';
 
 // Loading Spinner Component defined within App.tsx
 const LoadingSpinner: React.FC = () => (
@@ -48,7 +50,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
 };
 
 const App: React.FC = () => {
-  const [activeView, setActiveView] = useState<ViewType>('TravelAdvisories');
+  const [activeView, setActiveView] = useState<ViewType>('SupplierInfo');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(window.innerWidth < 1024);
 
   const renderView = () => {
@@ -59,6 +61,10 @@ const App: React.FC = () => {
         return <TravelAdvisoryView />;
       case 'RSSAdvisories':
         return <RSSAdvisoryCardView />;
+      case 'SupplierMock':
+        return <SupplierView />;
+      case 'SupplierTest':
+        return <SupplierTestView />;
     }
   };
 

@@ -96,8 +96,10 @@ const RSSAdvisoryCardView: React.FC = () => {
   return (
     <div className="space-y-6">
       <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-slate-800">Travel Advisories</h2>
-        <p className="text-slate-500 mt-1">Source: travel.state.gov</p>
+        <div>
+          <h2 className="text-2xl font-bold text-slate-800">U.S. Department of State Travel Advisories</h2>
+          <p className="text-slate-500 mt-1">Official travel advisories and alerts | Source: travel.state.gov</p>
+        </div>
       </div>
       <Filters
         searchTerm={searchTerm}
