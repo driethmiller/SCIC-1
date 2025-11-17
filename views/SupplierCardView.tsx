@@ -37,7 +37,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
       </div>
       <input
         type="text"
-        placeholder="Search by supplier name / number / address / CAGE code / status / UEI / zip / postal code"
+        placeholder="Search by supplier name, contract, project, CAGE, UEI, address, etc."
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
         className="block w-full bg-white border border-gray-300 rounded-md py-3 pl-10 pr-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"

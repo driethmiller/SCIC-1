@@ -21,6 +21,26 @@ const DetailRow: React.FC<{ label: string; value: React.ReactNode }> = ({ label,
     );
 };
 
+const PairedDetailRow: React.FC<{
+  label1: string;
+  value1: React.ReactNode;
+  label2: string;
+  value2: React.ReactNode;
+}> = ({ label1, value1, label2, value2 }) => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 py-3 border-b border-slate-100 last:border-b-0">
+      <div className="grid grid-cols-3 gap-4">
+        <dt className="text-sm font-medium text-slate-500">{label1}</dt>
+        <dd className="text-sm text-slate-800 col-span-2 break-words">{value1}</dd>
+      </div>
+      <div className="grid grid-cols-3 gap-4">
+        <dt className="text-sm font-medium text-slate-500">{label2}</dt>
+        <dd className="text-sm text-slate-800 col-span-2 break-words">{value2}</dd>
+      </div>
+    </div>
+  );
+};
+
 const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onClose, onSave, onDelete, isCreating = false }) => {
   const [isEditing, setIsEditing] = useState(isCreating);
   const [formData, setFormData] = useState<Partial<Supplier> | null>(null);
@@ -43,6 +63,8 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
         Province: null,
         CountryList: { Caption: '' },
         CAGEStatus: null,
+        Contracts: [],
+        Projects: [],
       });
     } else if (supplier) {
       setFormData({ ...supplier });
@@ -82,15 +104,59 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
     ].filter(Boolean).join(', ');
   
     const cageStatus = supplier.CAGEStatus ? supplier.CAGEStatus.Description : 'N/A';
+    const hasContracts = supplier.Contracts && supplier.Contracts.length > 0;
+    const hasProjects = supplier.Projects && supplier.Projects.length > 0;
 
     return (
         <>
             <dl>
-                <DetailRow label="Supplier Number" value={supplier.SupplierNo} />
-                <DetailRow label="CAGE Code" value={supplier.CAGECodeConcat} />
-                <DetailRow label="CAGE Status" value={cageStatus} />
-                <DetailRow label="UEI" value={supplier.UEID || 'N/A'} />
+                <PairedDetailRow 
+                    label1="Supplier Number"
+                    value1={supplier.SupplierNo}
+                    label2="UEI"
+                    value2={supplier.UEID || 'N/A'}
+                />
+                <PairedDetailRow 
+                    label1="CAGE Code"
+                    value1={supplier.CAGECodeConcat}
+                    label2="CAGE Status"
+                    value2={cageStatus}
+                />
                 <DetailRow label="Full Address" value={fullAddress} />
+                {(hasContracts || hasProjects) && (
+                    <div className="py-3 border-b border-slate-100 last:border-b-0">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                            <div>
+                                <dt className="text-sm font-medium text-slate-500 mb-2">Contracts</dt>
+                                <dd>
+                                    {hasContracts ? (
+                                        <ul className="list-disc list-inside bg-slate-50 p-3 rounded-md border border-slate-200 h-full text-sm text-slate-700">
+                                            {supplier.Contracts.map((contract, index) => (
+                                                <li key={index} className="py-1">{contract.ContractNo}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <div className="text-sm text-slate-500 italic p-3 bg-slate-50 rounded-md border border-slate-200 h-full">No contracts found.</div>
+                                    )}
+                                </dd>
+                            </div>
+                            <div>
+                                <dt className="text-sm font-medium text-slate-500 mb-2">Projects</dt>
+                                <dd>
+                                    {hasProjects ? (
+                                        <ul className="list-disc list-inside bg-slate-50 p-3 rounded-md border border-slate-200 h-full text-sm text-slate-700">
+                                            {supplier.Projects.map((project, index) => (
+                                                <li key={index} className="py-1">{project.AcronymAbbrevia}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <div className="text-sm text-slate-500 italic p-3 bg-slate-50 rounded-md border border-slate-200 h-full">No projects found.</div>
+                                    )}
+                                </dd>
+                            </div>
+                        </div>
+                    </div>
+                )}<br />
                 {supplier.SupplierWebsite && (
                     <DetailRow
                         label="Website"
@@ -171,7 +237,7 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
   );
 
   return (
-    <Modal isOpen={!!supplier || isCreating} onClose={onClose} title={isCreating ? 'Create New Supplier' : (isEditing ? `Editing ${supplier.SupplierName}` : supplier.SupplierName)}>
+    <Modal isOpen={!!supplier || isCreating} onClose={onClose} title={isCreating ? 'Create New Supplier' : (isEditing ? `Editing ${supplier.SupplierName}` : supplier.SupplierName)} size="3xl">
       {isEditing ? renderEditView() : renderReadOnlyView()}
     </Modal>
   );

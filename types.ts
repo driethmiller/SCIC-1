@@ -15,6 +15,8 @@ export interface Supplier {
   Province: { Caption: string } | null;
   CountryList: { Caption: string };
   CAGEStatus: { Description:string } | null;
+  Contracts: { ContractNo: string }[] | null;
+  Projects: { AcronymAbbrevia: string }[] | null;
 }
 
 export interface ApiResponse_Supplier {

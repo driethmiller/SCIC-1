@@ -89,16 +89,17 @@ const SupplierTestView: React.FC = () => {
   };
   
   // fix: Use SupplierMock for parameter.
-  const handleSave = (formData: Omit<Supplier, 'cageCode'> & { CageCodeConcat?: string }) => {
+  // Fix: Corrected function signature typos and implementation to handle supplier creation/updates correctly.
+  const handleSave = (formData: Omit<Supplier, 'CAGECodeConcat'> & { CAGECodeConcat?: string }) => {
     if (editingSupplier) {
       // Update
       setSuppliers(suppliers.map(s => s.CAGECodeConcat === editingSupplier.CAGECodeConcat ? { ...s, ...formData } as Supplier : s));
     } else {
       // Create
       const newSupplier: Supplier = {
-        ...formData,
+        ...(formData as Omit<Supplier, "CAGECodeConcat">),
         CAGECodeConcat: formData.CAGECodeConcat || `NEW-${Date.now()}` // Simple unique ID generation
-      };
+      } as Supplier;
       setSuppliers([newSupplier, ...suppliers]);
     }
     handleCloseModal();
@@ -119,7 +120,7 @@ const SupplierTestView: React.FC = () => {
     { header: 'City', accessor: 'City' },
     { header: 'US State', accessor: (item: Supplier) => (
         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${item.StateProvince !== null ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-            {item.StateProvince.Caption}
+            {item.StateProvince?.Caption}
         </span>
     )},
     { header: 'Country', accessor: (item: Supplier) => (
@@ -129,7 +130,7 @@ const SupplierTestView: React.FC = () => {
     )},
     { header: 'Canada Province', accessor: (item: Supplier) => (
         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${item.Province !== null ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-            {item.Province.Caption}
+            {item.Province?.Caption}
         </span>
     )},
     { header: 'Territory', accessor: (item: Supplier) => (
@@ -212,6 +213,7 @@ interface SupplierFormModalProps {
 
 const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, onSave, supplier }) => {
     // fix: Use SupplierMock for form data state.
+    // Fix: Added missing `Contracts` property and corrected `CountryList` to align with the `Supplier` type.
     const [formData, setFormData] = useState<Omit<Supplier, 'CAGECodeConcat'>>({
       SupplierName: '',
       SupplierNo: '',
@@ -221,31 +223,40 @@ const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, 
       StateProvince: null,
       Province: null,
       StateProvince2: '',
-      CountryList: null,
+      CountryList: { Caption: '' },
       ZIPCodeConcat: '',
       PostalCode: '',
       CAGEStatus: null,
       SupplierWebsite: '',
+      Contracts: null,
+// FIX: Added missing 'Projects' property to align with the 'Supplier' type.
+      Projects: null,
     });
 
     useEffect(() => {
       if (supplier) {
+        // Fix: Correctly copy all properties from the supplier object, including `Contracts`.
+// FIX: Added missing 'Projects' property to align with the 'Supplier' type.
         setFormData({
           SupplierName: supplier.SupplierName,
           SupplierNo: supplier.SupplierNo,
           UEID: supplier.UEID,
           SupplierAddress: supplier.SupplierAddress,
           City: supplier.City,
-          StateProvince: null,
-          Province: null,
-          StateProvince2: '',
-          CountryList: null,
-          ZIPCodeConcat: '',
-          PostalCode: '',
-          CAGEStatus: null,
-          SupplierWebsite: '',
+          StateProvince: supplier.StateProvince,
+          Province: supplier.Province,
+          StateProvince2: supplier.StateProvince2,
+          CountryList: supplier.CountryList,
+          ZIPCodeConcat: supplier.ZIPCodeConcat,
+          PostalCode: supplier.PostalCode,
+          CAGEStatus: supplier.CAGEStatus,
+          SupplierWebsite: supplier.SupplierWebsite,
+          Contracts: supplier.Contracts,
+          Projects: supplier.Projects,
         });
       } else {
+        // Fix: Added missing `Contracts` property and corrected `CountryList` for new supplier form.
+// FIX: Added missing 'Projects' property to align with the 'Supplier' type.
         setFormData({
           SupplierName: '',
           SupplierNo: '',
@@ -255,11 +266,13 @@ const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, 
           StateProvince: null,
           Province: null,
           StateProvince2: '',
-          CountryList: null,
+          CountryList: { Caption: '' },
           ZIPCodeConcat: '',
           PostalCode: '',
           CAGEStatus: null,
           SupplierWebsite: '',
+          Contracts: null,
+          Projects: null,
       });
       }
     }, [supplier]);
@@ -279,21 +292,22 @@ const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
               <label htmlFor="companyName" className="block text-sm font-medium text-slate-700">Company Name</label>
-              <input type="text" name="companyName" id="companyName" value={formData.SupplierName} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+              <input type="text" name="SupplierName" id="companyName" value={formData.SupplierName} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
           </div>
             {!supplier && (
               <div>
-                  <label htmlFor="cageCode" className="block text-sm font-medium text-slate-700">CAGE Code</label>
-                  <input type="text" name="cageCode" id="cageCode" onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+                  {/* Fix: Changed input name to match the `Supplier` type property `CAGECodeConcat`. */}
+                  <label htmlFor="CAGECodeConcat" className="block text-sm font-medium text-slate-700">CAGE Code</label>
+                  <input type="text" name="CAGECodeConcat" id="CAGECodeConcat" onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
               </div>
           )}
             <div>
               <label htmlFor="address" className="block text-sm font-medium text-slate-700">Address</label>
-              <input type="text" name="address" id="address" value={formData.SupplierAddress} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+              <input type="text" name="SupplierAddress" id="address" value={formData.SupplierAddress} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
           </div>
             <div>
               <label htmlFor="city" className="block text-sm font-medium text-slate-700">City</label>
-              <input type="text" name="city" id="city" value={formData.City} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
+              <input type="text" name="City" id="city" value={formData.City} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
           </div>
           {/*
             <div>

@@ -21,7 +21,8 @@ export const fetchSuppliers = async (
   const params = new URLSearchParams({
     '$count': 'true',
     '$select': 'SupplierNo,SupplierName,CAGECodeConcat,UEID,SupplierAddress,City,ZIPCodeConcat,PostalCode,StateProvince2,SupplierWebsite',
-    '$expand': 'StateProvince($select=Caption),Province($select=Caption),CountryList($select=Caption),CAGEStatus($select=Description)',
+    '$expand': 'StateProvince($select=Caption),Province($select=Caption),CountryList($select=Caption),CAGEStatus($select=Description),Contracts($filter=ModNum eq \'0\';$select=ContractNo),Projects($select=AcronymAbbrevia)',
+    // '$top':'200',
     '$top': PAGE_SIZE.toString(),
     '$skip': skip.toString(),
     '$orderby': 'SupplierNo'
@@ -47,6 +48,8 @@ export const fetchSuppliers = async (
       `contains(ZIPCodeConcat, '${sanitizedSearchTerm}')`,
       `contains(PostalCode, '${sanitizedSearchTerm}')`,
       `contains(CAGEStatus/Description, '${sanitizedSearchTerm}')`,
+      `Contracts/any(c: contains(c/ContractNo, '${sanitizedSearchTerm}'))`,
+      `Projects/any(p: contains(p/AcronymAbbrevia, '${sanitizedSearchTerm}'))`
     ].join(' or ');
 
     filterQuery += ` and (${searchFilter})`;
