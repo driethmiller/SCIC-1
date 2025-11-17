@@ -9,7 +9,7 @@ import SupplierView from './views/SupplierView';
 import SupplierBView from './views/SupplierBView';
 
 const App: React.FC = () => {
-  const [activeView, setActiveView] = useState<ViewType>('SupplierInfo');
+  const [activeView, setActiveView] = useState<ViewType>('Suppliers');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(window.innerWidth < 1024);
   const [currentRole, setCurrentRole] = useState<UserRole>('SCIC Contributor');
 
