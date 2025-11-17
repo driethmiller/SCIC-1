@@ -59,8 +59,6 @@ const App: React.FC = () => {
         return <SupplierCardView />;
       case 'TravelAdvisories':
         return <TravelAdvisoryView />;
-      case 'RSSAdvisories':
-        return <RSSAdvisoryCardView />;
       case 'SupplierMock':
         return <SupplierView />;
       case 'SupplierTest':

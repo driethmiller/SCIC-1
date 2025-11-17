@@ -55,7 +55,15 @@ const RSSAdvisoryCardView: React.FC = () => {
       const parsedData = parseAdvisories(xmlText);
       setAllAdvisories(parsedData);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An unknown error occurred. The CORS proxy may be down.');
+      // A "Failed to fetch" error is a generic network error.
+      // In this context, it's highly likely caused by the public proxy service.
+      if (err instanceof Error && err.message.includes('Failed to fetch')) {
+        setError('Could not retrieve travel advisories. The public proxy service used to fetch the data may be temporarily unavailable. Please try again later.');
+      } else if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unknown error occurred while fetching advisories.');
+      }
       console.error(err);
     } finally {
       setLoading(false);

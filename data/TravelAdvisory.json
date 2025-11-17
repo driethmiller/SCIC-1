@@ -3,1189 +3,1387 @@
   {
     "country": "Afghanistan",
     "level": 4,
-    "details": "Do not travel to Afghanistan due to armed conflict, civil unrest, crime, terrorism, and kidnapping. On August 31, 2021, the U.S. Embassy in Kabul suspended all operations.",
-    "lastUpdated": "2024-01-17"
+    "details": "Do not travel to Afghanistan due to armed conflict, civil unrest, crime, terrorism, and kidnapping.",
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/afghanistan-travel-advisory.html"
   },
   {
     "country": "Albania",
     "level": 1,
     "details": "Exercise normal precautions in Albania.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/albania-travel-advisory.html"
   },
   {
     "country": "Algeria",
     "level": 2,
     "details": "Exercise increased caution in Algeria due to terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-24"
+    "lastUpdated": "2023-07-24",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/algeria-travel-advisory.html"
   },
   {
     "country": "Andorra",
     "level": 1,
     "details": "Exercise normal precautions in Andorra.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/andorra-travel-advisory.html"
   },
   {
     "country": "Angola",
     "level": 2,
-    "details": "Exercise increased caution in Angola due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-04-22"
+    "details": "Exercise increased caution in Angola due to crime.",
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/angola-travel-advisory.html"
   },
   {
     "country": "Antigua and Barbuda",
     "level": 1,
     "details": "Exercise normal precautions in Antigua and Barbuda.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/antigua-and-barbuda-travel-advisory.html"
   },
   {
     "country": "Argentina",
     "level": 1,
     "details": "Exercise normal precautions in Argentina.",
-    "lastUpdated": "2023-11-09"
+    "lastUpdated": "2023-11-09",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/argentina-travel-advisory.html"
   },
   {
     "country": "Armenia",
     "level": 2,
     "details": "Exercise increased caution in Armenia due to armed conflict. Some areas have increased risk.",
-    "lastUpdated": "2023-10-13"
+    "lastUpdated": "2023-10-13",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/armenia-travel-advisory.html"
   },
   {
     "country": "Australia",
     "level": 1,
     "details": "Exercise normal precautions in Australia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/australia-travel-advisory.html"
   },
   {
     "country": "Austria",
     "level": 2,
     "details": "Exercise increased caution in Austria due to terrorism.",
-    "lastUpdated": "2023-11-21"
+    "lastUpdated": "2023-11-21",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/austria-travel-advisory.html"
   },
   {
     "country": "Azerbaijan",
     "level": 2,
     "details": "Exercise increased caution in Azerbaijan due to terrorism concerns and armed conflict. Some areas have increased risk.",
-    "lastUpdated": "2023-09-20"
+    "lastUpdated": "2023-09-20",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/azerbaijan-travel-advisory.html"
   },
   {
     "country": "The Bahamas",
     "level": 2,
-    "details": "Exercise increased caution in The Bahamas due to crime.",
-    "lastUpdated": "2024-05-15"
+    "details": "Exercise increased caution in The Bahamas due to crime. Some areas have increased risk.",
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/the-bahamas-travel-advisory.html"
   },
   {
     "country": "Bahrain",
     "level": 2,
     "details": "Exercise increased caution in Bahrain due to terrorism.",
-    "lastUpdated": "2023-12-19"
+    "lastUpdated": "2023-12-19",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bahrain-travel-advisory.html"
   },
   {
     "country": "Bangladesh",
     "level": 2,
     "details": "Exercise increased caution in Bangladesh due to crime, terrorism, and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bangladesh-travel-advisory.html"
   },
   {
     "country": "Barbados",
     "level": 1,
     "details": "Exercise normal precautions in Barbados.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/barbados-travel-advisory.html"
   },
   {
     "country": "Belarus",
     "level": 4,
     "details": "Do not travel to Belarus due to the arbitrary enforcement of laws, the risk of detention, the Russian military attack on neighboring Ukraine, and the buildup of Russian military in Belarus along the border with Ukraine.",
-    "lastUpdated": "2023-10-23"
+    "lastUpdated": "2023-10-23",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/belarus-travel-advisory.html"
   },
   {
     "country": "Belgium",
     "level": 2,
     "details": "Exercise increased caution in Belgium due to terrorism.",
-    "lastUpdated": "2023-10-18"
+    "lastUpdated": "2023-10-18",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/belgium-travel-advisory.html"
   },
   {
     "country": "Belize",
     "level": 2,
     "details": "Exercise increased caution in Belize due to crime.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/belize-travel-advisory.html"
   },
   {
     "country": "Benin",
     "level": 3,
     "details": "Reconsider travel to Benin due to crime, kidnapping, and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2024-03-27"
+    "lastUpdated": "2024-03-27",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/benin-travel-advisory.html"
   },
   {
     "country": "Bermuda",
     "level": 1,
     "details": "Exercise normal precautions in Bermuda.",
-    "lastUpdated": "2024-03-01"
+    "lastUpdated": "2024-03-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bermuda-travel-advisory.html"
   },
   {
     "country": "Bhutan",
     "level": 1,
     "details": "Exercise normal precautions in Bhutan.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bhutan-travel-advisory.html"
   },
   {
     "country": "Bolivia",
     "level": 2,
-    "details": "Exercise increased caution in Bolivia due to civil unrest. Some areas have increased risk.",
-    "lastUpdated": "2024-04-22"
+    "details": "Exercise increased caution in Bolivia due to civil unrest.",
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bolivia-travel-advisory.html"
   },
   {
     "country": "Bosnia and Herzegovina",
     "level": 2,
     "details": "Exercise increased caution in Bosnia and Herzegovina due to terrorism and land mines.",
-    "lastUpdated": "2023-08-23"
+    "lastUpdated": "2023-08-23",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bosnia-and-herzegovina-travel-advisory.html"
   },
   {
     "country": "Botswana",
     "level": 1,
     "details": "Exercise normal precautions in Botswana.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/botswana-travel-advisory.html"
   },
   {
     "country": "Brazil",
     "level": 2,
-    "details": "Exercise increased caution in Brazil due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-05-15"
+    "details": "Exercise increased caution in Brazil due to crime.",
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brazil-travel-advisory.html"
   },
   {
     "country": "Brunei",
     "level": 1,
     "details": "Exercise normal precautions in Brunei.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/brunei-travel-advisory.html"
   },
   {
     "country": "Bulgaria",
     "level": 1,
     "details": "Exercise normal precautions in Bulgaria.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/bulgaria-travel-advisory.html"
   },
   {
     "country": "Burkina Faso",
     "level": 4,
     "details": "Do not travel to Burkina Faso due to terrorism, crime, and kidnapping.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/burkina-faso-travel-advisory.html"
   },
   {
-    "country": "Burma (Myanmar)",
+    "country": "Burma",
     "level": 4,
     "details": "Do not travel to Burma (Myanmar) due to civil unrest, armed conflict, and arbitrary enforcement of local laws. Reconsider travel to Burma (Myanmar) due to wrongful detentions.",
-    "lastUpdated": "2024-01-23"
+    "lastUpdated": "2024-01-23",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/burma-travel-advisory.html"
   },
   {
     "country": "Burundi",
     "level": 3,
     "details": "Reconsider travel to Burundi due to crime, health, and political violence. Some areas have increased risk.",
-    "lastUpdated": "2024-01-09"
+    "lastUpdated": "2024-01-09",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/burundi-travel-advisory.html"
   },
   {
     "country": "Cabo Verde",
     "level": 1,
     "details": "Exercise normal precautions in Cabo Verde.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/cabo-verde-travel-advisory.html"
   },
   {
     "country": "Cambodia",
     "level": 1,
     "details": "Exercise normal precautions in Cambodia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/cambodia-travel-advisory.html"
   },
   {
     "country": "Cameroon",
     "level": 3,
-    "details": "Reconsider travel to Cameroon due to crime and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2023-11-20"
+    "details": "Reconsider travel to Cameroon due to crime and kidnapping.",
+    "lastUpdated": "2023-11-20",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/cameroon-travel-advisory.html"
   },
   {
     "country": "Canada",
     "level": 1,
     "details": "Exercise normal precautions in Canada.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/canada-travel-advisory.html"
   },
   {
     "country": "Central African Republic",
     "level": 4,
     "details": "Do not travel to the Central African Republic (CAR) due to crime, civil unrest, and kidnapping.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/central-african-republic-travel-advisory.html"
   },
   {
     "country": "Chad",
     "level": 3,
-    "details": "Reconsider travel to Chad due to crime, terrorism, civil unrest, and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2024-04-12"
+    "details": "Reconsider travel to Chad due to crime, terrorism, civil unrest, and kidnapping.",
+    "lastUpdated": "2024-04-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/chad-travel-advisory.html"
   },
   {
     "country": "Chile",
     "level": 2,
     "details": "Exercise increased caution in Chile due to crime and civil unrest.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/chile-travel-advisory.html"
   },
   {
     "country": "China",
     "level": 3,
     "details": "Reconsider travel to Mainland China due to the arbitrary enforcement of local laws, including in relation to exit bans, and the risk of wrongful detentions.",
-    "lastUpdated": "2023-09-01"
+    "lastUpdated": "2023-09-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/china-travel-advisory.html"
   },
   {
     "country": "Colombia",
     "level": 3,
     "details": "Reconsider travel to Colombia due to crime and terrorism. Exercise increased caution in Colombia due to civil unrest and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2024-03-27"
+    "lastUpdated": "2024-03-27",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/colombia-travel-advisory.html"
   },
   {
     "country": "Comoros",
     "level": 2,
     "details": "Exercise increased caution in Comoros due to crime and civil unrest.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/comoros-travel-advisory.html"
   },
   {
     "country": "Congo, Democratic Republic of the",
     "level": 3,
     "details": "Reconsider travel to the Democratic Republic of the Congo (DRC) due to crime and civil unrest. Some areas have increased risk.",
-    "lastUpdated": "2024-02-12"
+    "lastUpdated": "2024-02-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/democratic-republic-of-the-congo-travel-advisory.html"
   },
   {
     "country": "Congo, Republic of the",
     "level": 2,
-    "details": "Exercise increased caution in the Republic of the Congo due to crime and civil unrest. Some areas have increased risk.",
-    "lastUpdated": "2024-03-12"
+    "details": "Exercise increased caution in the Republic of the Congo due to crime and civil unrest.",
+    "lastUpdated": "2024-03-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/republic-of-the-congo-travel-advisory.html"
   },
   {
     "country": "Costa Rica",
     "level": 2,
     "details": "Exercise increased caution in Costa Rica due to crime.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/costa-rica-travel-advisory.html"
   },
   {
     "country": "Cote d'Ivoire",
     "level": 2,
     "details": "Exercise increased caution in Cote d'Ivoire due to crime and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/cote-d-ivoire-travel-advisory.html"
   },
   {
     "country": "Croatia",
     "level": 1,
     "details": "Exercise normal precautions in Croatia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/croatia-travel-advisory.html"
   },
   {
     "country": "Cuba",
     "level": 2,
     "details": "Exercise increased caution in Cuba due to demonstrable risk to safety and security.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/cuba-travel-advisory.html"
   },
   {
     "country": "Curacao",
     "level": 1,
     "details": "Exercise normal precautions in Curacao.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/curacao-travel-advisory.html"
   },
   {
     "country": "Cyprus",
     "level": 1,
     "details": "Exercise normal precautions in Cyprus.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/cyprus-travel-advisory.html"
   },
   {
     "country": "Czech Republic",
     "level": 1,
     "details": "Exercise normal precautions in the Czech Republic.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/czech-republic-travel-advisory.html"
   },
   {
     "country": "Denmark",
     "level": 2,
     "details": "Exercise increased caution in Denmark due to terrorism.",
-    "lastUpdated": "2023-08-16"
+    "lastUpdated": "2023-08-16",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/denmark-travel-advisory.html"
   },
   {
     "country": "Djibouti",
     "level": 2,
-    "details": "Exercise increased caution in Djibouti due to terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise increased caution in Djibouti due to terrorism.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/djibouti-travel-advisory.html"
   },
   {
     "country": "Dominica",
     "level": 1,
     "details": "Exercise normal precautions in Dominica.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/dominica-travel-advisory.html"
   },
   {
     "country": "Dominican Republic",
     "level": 2,
     "details": "Exercise increased caution in the Dominican Republic due to crime.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/dominican-republic-travel-advisory.html"
   },
   {
     "country": "Ecuador",
     "level": 2,
-    "details": "Exercise increased caution in Ecuador due to civil unrest, crime, and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2024-02-28"
+    "details": "Exercise increased caution in Ecuador due to civil unrest, crime, and kidnapping.",
+    "lastUpdated": "2024-02-28",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ecuador-travel-advisory.html"
   },
   {
     "country": "Egypt",
     "level": 3,
-    "details": "Reconsider travel to Egypt due to terrorism. Exercise increased caution in Egypt due to the Embassy’s limited ability to assist dual national U.S.-Egyptian citizens who are arrested or detained. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Reconsider travel to Egypt due to terrorism. Exercise increased caution in Egypt due to the Embassy’s limited ability to assist dual national U.S.-Egyptian citizens who are arrested or detained.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/egypt-travel-advisory.html"
   },
   {
     "country": "El Salvador",
     "level": 3,
     "details": "Reconsider travel to El Salvador due to crime.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/el-salvador-travel-advisory.html"
   },
   {
     "country": "Equatorial Guinea",
     "level": 1,
     "details": "Exercise normal precautions in Equatorial Guinea.",
-    "lastUpdated": "2023-10-18"
+    "lastUpdated": "2023-10-18",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/equatorial-guinea-travel-advisory.html"
   },
   {
     "country": "Eritrea",
     "level": 2,
-    "details": "Exercise increased caution in Eritrea due to travel restrictions, limited consular assistance, and landmines. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise increased caution in Eritrea due to travel restrictions, limited consular assistance, and landmines.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/eritrea-travel-advisory.html"
   },
   {
     "country": "Estonia",
     "level": 1,
     "details": "Exercise normal precautions in Estonia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/estonia-travel-advisory.html"
   },
   {
     "country": "Eswatini (Swaziland)",
     "level": 2,
     "details": "Exercise increased caution in Eswatini due to crime and civil unrest.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/eswatini-travel-advisory.html"
   },
   {
     "country": "Ethiopia",
     "level": 3,
     "details": "Reconsider travel to Ethiopia due to arbitrary detention, kidnapping, and wrongful detentions. Some areas have increased risk.",
-    "lastUpdated": "2024-03-22"
+    "lastUpdated": "2024-03-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ethiopia-travel-advisory.html"
   },
   {
     "country": "Fiji",
     "level": 1,
     "details": "Exercise normal precautions in Fiji.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/fiji-travel-advisory.html"
   },
   {
     "country": "Finland",
     "level": 1,
     "details": "Exercise normal precautions in Finland.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/finland-travel-advisory.html"
   },
   {
     "country": "France",
     "level": 2,
     "details": "Exercise increased caution in France due to terrorism and civil unrest.",
-    "lastUpdated": "2024-01-18"
+    "lastUpdated": "2024-07-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/france-travel-advisory.html"
   },
   {
     "country": "Gabon",
     "level": 2,
     "details": "Exercise increased caution in Gabon due to crime.",
-    "lastUpdated": "2024-03-05"
+    "lastUpdated": "2024-03-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/gabon-travel-advisory.html"
   },
   {
     "country": "The Gambia",
     "level": 2,
     "details": "Exercise increased caution in The Gambia due to crime.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/the-gambia-travel-advisory.html"
   },
   {
     "country": "Georgia",
     "level": 1,
-    "details": "Exercise normal precautions in Georgia. Some areas have increased risk.",
-    "lastUpdated": "2023-08-28"
+    "details": "Exercise normal precautions in Georgia.",
+    "lastUpdated": "2023-08-28",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/georgia-travel-advisory.html"
   },
   {
     "country": "Germany",
     "level": 2,
     "details": "Exercise increased caution in Germany due to terrorism.",
-    "lastUpdated": "2023-11-21"
+    "lastUpdated": "2023-11-21",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/germany-travel-advisory.html"
   },
   {
     "country": "Ghana",
     "level": 2,
-    "details": "Exercise increased caution in Ghana due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-04-12"
+    "details": "Exercise increased caution in Ghana due to crime.",
+    "lastUpdated": "2024-04-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ghana-travel-advisory.html"
   },
   {
     "country": "Greece",
     "level": 1,
     "details": "Exercise normal precautions in Greece.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/greece-travel-advisory.html"
   },
   {
     "country": "Grenada",
     "level": 1,
     "details": "Exercise normal precautions in Grenada.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/grenada-travel-advisory.html"
   },
   {
     "country": "Guatemala",
     "level": 3,
-    "details": "Reconsider travel to Guatemala due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-05-15"
+    "details": "Reconsider travel to Guatemala due to crime.",
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/guatemala-travel-advisory.html"
   },
   {
     "country": "Guinea",
     "level": 3,
-    "details": "Reconsider travel to Guinea due to civil unrest. Some areas have increased risk.",
-    "lastUpdated": "2024-03-01"
+    "details": "Reconsider travel to Guinea due to civil unrest.",
+    "lastUpdated": "2024-03-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/guinea-travel-advisory.html"
   },
   {
     "country": "Guinea-Bissau",
     "level": 3,
-    "details": "Reconsider travel to Guinea-Bissau due to civil unrest. Some areas have increased risk.",
-    "lastUpdated": "2024-04-12"
+    "details": "Reconsider travel to Guinea-Bissau due to civil unrest.",
+    "lastUpdated": "2024-04-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/guinea-bissau-travel-advisory.html"
   },
   {
     "country": "Guyana",
     "level": 2,
     "details": "Exercise increased caution in Guyana due to crime.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/guyana-travel-advisory.html"
   },
   {
     "country": "Haiti",
     "level": 4,
     "details": "Do not travel to Haiti due to kidnapping, crime, civil unrest, and poor health care infrastructure.",
-    "lastUpdated": "2023-07-27"
+    "lastUpdated": "2024-07-25",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/haiti-travel-advisory.html"
   },
   {
     "country": "Honduras",
     "level": 3,
-    "details": "Reconsider travel to Honduras due to crime. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Reconsider travel to Honduras due to crime.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/honduras-travel-advisory.html"
   },
   {
     "country": "Hong Kong",
     "level": 2,
     "details": "Exercise increased caution in the Hong Kong SAR due to the arbitrary enforcement of local laws.",
-    "lastUpdated": "2023-09-01"
+    "lastUpdated": "2023-09-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/hong-kong-travel-advisory.html"
   },
   {
     "country": "Hungary",
     "level": 1,
     "details": "Exercise normal precautions in Hungary.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/hungary-travel-advisory.html"
   },
   {
     "country": "Iceland",
     "level": 1,
-    "details": "Exercise normal precautions in Iceland.",
-    "lastUpdated": "2024-01-18"
+    "details": "Exercise Normal Precautions in Iceland.",
+    "lastUpdated": "2024-01-18",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/iceland-travel-advisory.html"
   },
   {
     "country": "India",
     "level": 2,
     "details": "Exercise increased caution in India due to crime and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/india-travel-advisory.html"
   },
   {
     "country": "Indonesia",
     "level": 2,
-    "details": "Exercise increased caution in Indonesia due to terrorism and natural disasters. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "details": "Exercise increased caution in Indonesia due to terrorism and natural disasters.",
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/indonesia-travel-advisory.html"
   },
   {
     "country": "Iran",
     "level": 4,
     "details": "Do not travel to Iran due to the risk of kidnapping and the arbitrary arrest and detention of U.S. citizens.",
-    "lastUpdated": "2024-04-15"
+    "lastUpdated": "2024-04-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/iran-travel-advisory.html"
   },
   {
     "country": "Iraq",
     "level": 4,
     "details": "Do not travel to Iraq due to terrorism, kidnapping, armed conflict, civil unrest, and Mission Iraq’s limited capacity to provide support to U.S. citizens.",
-    "lastUpdated": "2023-10-22"
+    "lastUpdated": "2023-10-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/iraq-travel-advisory.html"
   },
   {
     "country": "Ireland",
     "level": 1,
     "details": "Exercise normal precautions in Ireland.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ireland-travel-advisory.html"
   },
   {
     "country": "Israel, the West Bank, and Gaza",
     "level": 3,
     "details": "Reconsider travel to Israel and the West Bank due to terrorism and civil unrest. Do not travel to Gaza due to terrorism, civil unrest, and armed conflict.",
-    "lastUpdated": "2024-04-16"
+    "lastUpdated": "2024-04-16",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/israel-west-bank-and-gaza-travel-advisory.html"
   },
   {
     "country": "Italy",
     "level": 2,
     "details": "Exercise increased caution in Italy due to terrorism.",
-    "lastUpdated": "2023-12-07"
+    "lastUpdated": "2023-12-07",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/italy-travel-advisory.html"
   },
   {
     "country": "Jamaica",
     "level": 3,
     "details": "Reconsider travel to Jamaica due to crime.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/jamaica-travel-advisory.html"
   },
   {
     "country": "Japan",
     "level": 1,
     "details": "Exercise normal precautions in Japan.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html"
   },
   {
     "country": "Jordan",
     "level": 2,
     "details": "Exercise increased caution in Jordan due to terrorism. Some areas have increased risk.",
-    "lastUpdated": "2024-04-16"
+    "lastUpdated": "2024-04-16",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/jordan-travel-advisory.html"
   },
   {
     "country": "Kazakhstan",
     "level": 1,
     "details": "Exercise normal precautions in Kazakhstan.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/kazakhstan-travel-advisory.html"
   },
   {
     "country": "Kenya",
     "level": 2,
     "details": "Exercise increased caution in Kenya due to crime, terrorism, civil unrest, and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/kenya-travel-advisory.html"
   },
   {
     "country": "Kiribati",
     "level": 1,
     "details": "Exercise normal precautions in Kiribati.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/kiribati-travel-advisory.html"
   },
   {
     "country": "Kosovo",
     "level": 2,
-    "details": "Exercise increased caution in Kosovo due to terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-10-02"
+    "details": "Exercise increased caution in Kosovo due to terrorism.",
+    "lastUpdated": "2023-10-02",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/kosovo-travel-advisory.html"
   },
   {
     "country": "Kuwait",
     "level": 1,
     "details": "Exercise normal precautions in Kuwait.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/kuwait-travel-advisory.html"
   },
   {
     "country": "Kyrgyz Republic",
     "level": 1,
-    "details": "Exercise normal precautions in the Kyrgyz Republic. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise normal precautions in the Kyrgyz Republic.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/kyrgyz-republic-travel-advisory.html"
   },
   {
     "country": "Laos",
     "level": 1,
-    "details": "Exercise normal precautions in Laos. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise normal precautions in Laos.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/laos-travel-advisory.html"
   },
   {
     "country": "Latvia",
     "level": 1,
     "details": "Exercise normal precautions in Latvia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/latvia-travel-advisory.html"
   },
   {
     "country": "Lebanon",
     "level": 4,
     "details": "Do not travel to Lebanon due to the unpredictable security situation. Reconsider travel to Lebanon due to the risk of armed conflict. Some areas have increased risk.",
-    "lastUpdated": "2024-04-12"
+    "lastUpdated": "2024-04-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/lebanon-travel-advisory.html"
   },
   {
     "country": "Lesotho",
     "level": 2,
     "details": "Exercise increased caution in Lesotho due to crime.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/lesotho-travel-advisory.html"
   },
   {
     "country": "Liberia",
     "level": 2,
     "details": "Exercise increased caution in Liberia due to crime and civil unrest.",
-    "lastUpdated": "2024-01-22"
+    "lastUpdated": "2024-01-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/liberia-travel-advisory.html"
   },
   {
     "country": "Libya",
     "level": 4,
     "details": "Do not travel to Libya due to crime, terrorism, civil unrest, kidnapping, and armed conflict.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/libya-travel-advisory.html"
   },
   {
     "country": "Liechtenstein",
     "level": 1,
     "details": "Exercise normal precautions in Liechtenstein.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/liechtenstein-travel-advisory.html"
   },
   {
     "country": "Lithuania",
     "level": 1,
     "details": "Exercise normal precautions in Lithuania.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/lithuania-travel-advisory.html"
   },
   {
     "country": "Luxembourg",
     "level": 1,
     "details": "Exercise normal precautions in Luxembourg.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/luxembourg-travel-advisory.html"
   },
   {
     "country": "Macau",
     "level": 2,
     "details": "Exercise increased caution in the Macau SAR due to the arbitrary enforcement of local laws.",
-    "lastUpdated": "2023-09-01"
+    "lastUpdated": "2023-09-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/macau-travel-advisory.html"
   },
   {
     "country": "Madagascar",
     "level": 2,
     "details": "Exercise increased caution in Madagascar due to crime and civil unrest.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/madagascar-travel-advisory.html"
   },
   {
     "country": "Malawi",
     "level": 2,
     "details": "Exercise increased caution in Malawi due to crime and civil unrest.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/malawi-travel-advisory.html"
   },
   {
     "country": "Malaysia",
     "level": 1,
     "details": "Exercise normal precautions in Malaysia. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/malaysia-travel-advisory.html"
   },
   {
     "country": "Maldives",
     "level": 2,
     "details": "Exercise increased caution in Maldives due to terrorism.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/maldives-travel-advisory.html"
   },
   {
     "country": "Mali",
     "level": 4,
     "details": "Do not travel to Mali due to crime, terrorism, and kidnapping.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mali-travel-advisory.html"
   },
   {
     "country": "Malta",
     "level": 1,
     "details": "Exercise normal precautions in Malta.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/malta-travel-advisory.html"
   },
   {
     "country": "Marshall Islands",
     "level": 1,
     "details": "Exercise normal precautions in the Marshall Islands.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/marshall-islands-travel-advisory.html"
   },
   {
     "country": "Mauritania",
     "level": 3,
     "details": "Reconsider travel to Mauritania due to crime and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mauritania-travel-advisory.html"
   },
   {
     "country": "Mauritius",
     "level": 1,
     "details": "Exercise normal precautions in Mauritius.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mauritius-travel-advisory.html"
   },
   {
     "country": "Mexico",
     "level": 2,
     "details": "Exercise Increased Caution When Traveling to Mexico due to crime and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2023-08-17"
+    "lastUpdated": "2024-07-31",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mexico-travel-advisory.html"
   },
   {
     "country": "Micronesia, Federated States of",
     "level": 1,
     "details": "Exercise normal precautions in the Federated States of Micronesia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/micronesia-travel-advisory.html"
   },
   {
     "country": "Moldova",
     "level": 1,
-    "details": "Exercise normal precautions in Moldova. Some areas have increased risk.",
-    "lastUpdated": "2023-08-28"
+    "details": "Exercise normal precautions in Moldova.",
+    "lastUpdated": "2023-08-28",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/moldova-travel-advisory.html"
   },
   {
     "country": "Monaco",
     "level": 1,
     "details": "Exercise normal precautions in Monaco.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/monaco-travel-advisory.html"
   },
   {
     "country": "Mongolia",
     "level": 1,
     "details": "Exercise normal precautions in Mongolia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mongolia-travel-advisory.html"
   },
   {
     "country": "Montenegro",
     "level": 1,
     "details": "Exercise normal precautions in Montenegro.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/montenegro-travel-advisory.html"
   },
   {
     "country": "Morocco",
     "level": 2,
-    "details": "Exercise increased caution in Morocco due to terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-10-11"
+    "details": "Exercise increased caution in Morocco due to terrorism.",
+    "lastUpdated": "2023-10-11",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/morocco-travel-advisory.html"
   },
   {
     "country": "Mozambique",
     "level": 2,
     "details": "Exercise increased caution in Mozambique due to health issues, crime and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mozambique-travel-advisory.html"
   },
   {
     "country": "Namibia",
     "level": 1,
     "details": "Exercise normal precautions in Namibia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/namibia-travel-advisory.html"
   },
   {
     "country": "Nauru",
     "level": 1,
     "details": "Exercise normal precautions in Nauru.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/nauru-travel-advisory.html"
   },
   {
     "country": "Nepal",
     "level": 2,
     "details": "Exercise increased caution in Nepal due to the potential for isolated political violence. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/nepal-travel-advisory.html"
   },
   {
     "country": "Netherlands",
     "level": 2,
     "details": "Exercise increased caution in the Netherlands due to terrorism.",
-    "lastUpdated": "2023-12-14"
+    "lastUpdated": "2023-12-14",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/netherlands-travel-advisory.html"
   },
   {
     "country": "New Zealand",
     "level": 1,
     "details": "Exercise normal precautions in New Zealand.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/new-zealand-travel-advisory.html"
   },
   {
     "country": "Nicaragua",
     "level": 3,
     "details": "Reconsider travel to Nicaragua due to arbitrary enforcement of laws, the risk of wrongful detention, and limited healthcare availability.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/nicaragua-travel-advisory.html"
   },
   {
     "country": "Niger",
     "level": 4,
     "details": "Do not travel to Niger due to crime, terrorism, and kidnapping.",
-    "lastUpdated": "2023-08-02"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/niger-travel-advisory.html"
   },
   {
     "country": "Nigeria",
     "level": 3,
-    "details": "Reconsider travel to Nigeria due to crime, terrorism, civil unrest, kidnapping, and armed gangs. Some areas have increased risk.",
-    "lastUpdated": "2023-09-29"
+    "details": "Reconsider travel to Nigeria due to crime, terrorism, civil unrest, kidnapping, and armed gangs.",
+    "lastUpdated": "2023-09-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/nigeria-travel-advisory.html"
   },
   {
     "country": "North Korea (Democratic People's Republic of Korea)",
     "level": 4,
     "details": "Do not travel to North Korea due to the serious risk of arrest and long-term detention of U.S. nationals.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/north-korea-travel-advisory.html"
   },
   {
     "country": "North Macedonia",
     "level": 1,
     "details": "Exercise normal precautions in North Macedonia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/north-macedonia-travel-advisory.html"
   },
   {
     "country": "Norway",
     "level": 2,
     "details": "Exercise increased caution in Norway due to terrorism.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/norway-travel-advisory.html"
   },
   {
     "country": "Oman",
     "level": 2,
     "details": "Exercise increased caution in Oman due to terrorism and armed conflict. Some areas have increased risk.",
-    "lastUpdated": "2023-12-19"
+    "lastUpdated": "2023-12-19",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/oman-travel-advisory.html"
   },
   {
     "country": "Pakistan",
     "level": 3,
     "details": "Reconsider travel to Pakistan due to terrorism and sectarian violence. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/pakistan-travel-advisory.html"
   },
   {
     "country": "Palau",
     "level": 1,
     "details": "Exercise normal precautions in Palau.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/palau-travel-advisory.html"
   },
   {
     "country": "Panama",
     "level": 2,
-    "details": "Exercise increased caution in Panama due to crime. Some areas have increased risk.",
-    "lastUpdated": "2023-10-25"
+    "details": "Exercise increased caution in Panama due to crime.",
+    "lastUpdated": "2023-10-25",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/panama-travel-advisory.html"
   },
   {
     "country": "Papua New Guinea",
     "level": 3,
-    "details": "Reconsider travel to Papua New Guinea due to crime, civil unrest, and piracy. Some areas have increased risk.",
-    "lastUpdated": "2024-01-18"
+    "details": "Reconsider travel to Papua New Guinea due to crime, civil unrest, and piracy.",
+    "lastUpdated": "2024-01-18",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/papua-new-guinea-travel-advisory.html"
   },
   {
     "country": "Paraguay",
     "level": 2,
-    "details": "Exercise increased caution in Paraguay due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-05-15"
+    "details": "Exercise increased caution in Paraguay due to crime.",
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/paraguay-travel-advisory.html"
   },
   {
     "country": "Peru",
     "level": 2,
     "details": "Exercise increased caution in Peru due to crime and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/peru-travel-advisory.html"
   },
   {
     "country": "Philippines",
     "level": 2,
-    "details": "Exercise increased caution in the Philippines due to crime, terrorism, civil unrest, and kidnapping. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "details": "Exercise increased caution in the Philippines due to crime, terrorism, civil unrest, and kidnapping.",
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/philippines-travel-advisory.html"
   },
   {
     "country": "Poland",
     "level": 1,
     "details": "Exercise normal precautions in Poland.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/poland-travel-advisory.html"
   },
   {
     "country": "Portugal",
     "level": 1,
     "details": "Exercise normal precautions in Portugal.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/portugal-travel-advisory.html"
   },
   {
     "country": "Qatar",
     "level": 1,
     "details": "Exercise normal precautions in Qatar.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/qatar-travel-advisory.html"
   },
   {
     "country": "Romania",
     "level": 1,
     "details": "Exercise normal precautions in Romania.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/romania-travel-advisory.html"
   },
   {
     "country": "Russia",
     "level": 4,
     "details": "Do not travel to Russia due to the unpredictable consequences of the unprovoked full-scale invasion of Ukraine by Russian military forces, the potential for harassment and the singling out of U.S. citizens for detention by Russian government security officials, the arbitrary enforcement of local law, limited flights into and out of Russia, the Embassy’s limited ability to assist U.S. citizens in Russia, and the possibility of terrorism.",
-    "lastUpdated": "2024-03-23"
+    "lastUpdated": "2024-03-23",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/russia-travel-advisory.html"
   },
   {
     "country": "Rwanda",
     "level": 1,
-    "details": "Exercise normal precautions in Rwanda. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise normal precautions in Rwanda.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/rwanda-travel-advisory.html"
   },
   {
     "country": "Samoa",
     "level": 1,
     "details": "Exercise normal precautions in Samoa.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/samoa-travel-advisory.html"
   },
   {
     "country": "San Marino",
     "level": 1,
     "details": "Exercise normal precautions in San Marino.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/san-marino-travel-advisory.html"
   },
   {
     "country": "Sao Tome and Principe",
     "level": 1,
     "details": "Exercise normal precautions in Sao Tome and Principe.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/sao-tome-and-principe-travel-advisory.html"
   },
   {
     "country": "Saudi Arabia",
     "level": 3,
     "details": "Reconsider travel to Saudi Arabia due to the threat of missile and drone attacks. Some areas have increased risk.",
-    "lastUpdated": "2023-12-19"
+    "lastUpdated": "2023-12-19",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/saudi-arabia-travel-advisory.html"
   },
   {
     "country": "Senegal",
     "level": 2,
-    "details": "Exercise increased caution in Senegal due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-02-12"
+    "details": "Exercise increased caution in Senegal due to crime.",
+    "lastUpdated": "2024-02-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/senegal-travel-advisory.html"
   },
   {
     "country": "Serbia",
     "level": 1,
     "details": "Exercise normal precautions in Serbia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/serbia-travel-advisory.html"
   },
   {
     "country": "Seychelles",
     "level": 1,
     "details": "Exercise normal precautions in Seychelles.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/seychelles-travel-advisory.html"
   },
   {
     "country": "Sierra Leone",
     "level": 2,
     "details": "Exercise increased caution in Sierra Leone due to crime and civil unrest.",
-    "lastUpdated": "2024-04-12"
+    "lastUpdated": "2024-04-12",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/sierra-leone-travel-advisory.html"
   },
   {
     "country": "Singapore",
     "level": 1,
     "details": "Exercise normal precautions in Singapore.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/singapore-travel-advisory.html"
   },
   {
     "country": "Slovakia",
     "level": 1,
     "details": "Exercise normal precautions in Slovakia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/slovakia-travel-advisory.html"
   },
   {
     "country": "Slovenia",
     "level": 1,
     "details": "Exercise normal precautions in Slovenia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/slovenia-travel-advisory.html"
   },
   {
     "country": "Solomon Islands",
     "level": 1,
     "details": "Exercise normal precautions in the Solomon Islands.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/solomon-islands-travel-advisory.html"
   },
   {
     "country": "Somalia",
     "level": 4,
     "details": "Do not travel to Somalia due to crime, terrorism, civil unrest, health issues, kidnapping, and piracy.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/somalia-travel-advisory.html"
   },
   {
     "country": "South Africa",
     "level": 2,
     "details": "Exercise increased caution in South Africa due to crime and civil unrest.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-africa-travel-advisory.html"
   },
   {
-    "country": "South Korea (Republic of Korea)",
+    "country": "South Korea",
     "level": 1,
     "details": "Exercise normal precautions in South Korea.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-korea-travel-advisory.html"
   },
   {
     "country": "South Sudan",
     "level": 4,
     "details": "Do not travel to South Sudan due to crime, kidnapping, and armed conflict.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2025-11-13",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/south-sudan-travel-advisory.html"
   },
   {
     "country": "Spain",
     "level": 2,
     "details": "Exercise increased caution in Spain due to terrorism and civil unrest.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/spain-travel-advisory.html"
   },
   {
     "country": "Sri Lanka",
     "level": 2,
     "details": "Exercise increased caution in Sri Lanka due to terrorism.",
-    "lastUpdated": "2023-10-05"
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/sri-lanka-travel-advisory.html"
   },
   {
     "country": "St. Kitts and Nevis",
     "level": 1,
     "details": "Exercise normal precautions in St. Kitts and Nevis.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/saint-kitts-and-nevis-travel-advisory.html"
   },
   {
     "country": "St. Lucia",
     "level": 1,
     "details": "Exercise normal precautions in St. Lucia.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/saint-lucia-travel-advisory.html"
   },
   {
     "country": "St. Vincent and the Grenadines",
     "level": 1,
     "details": "Exercise normal precautions in St. Vincent and the Grenadines.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/saint-vincent-and-the-grenadines-travel-advisory.html"
   },
   {
     "country": "Sudan",
     "level": 4,
     "details": "Do not travel to Sudan due to armed conflict, civil unrest, crime, terrorism, and kidnapping.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/sudan-travel-advisory.html"
   },
   {
     "country": "Suriname",
     "level": 1,
     "details": "Exercise normal precautions in Suriname.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/suriname-travel-advisory.html"
   },
   {
     "country": "Sweden",
     "level": 2,
     "details": "Exercise increased caution in Sweden due to terrorism.",
-    "lastUpdated": "2023-09-01"
+    "lastUpdated": "2023-09-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/sweden-travel-advisory.html"
   },
   {
     "country": "Switzerland",
     "level": 1,
     "details": "Exercise normal precautions in Switzerland.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/switzerland-travel-advisory.html"
   },
   {
     "country": "Syria",
     "level": 4,
     "details": "Do not travel to Syria due to terrorism, civil unrest, kidnapping, armed conflict, and risk of unjust detention.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/syria-travel-advisory.html"
   },
   {
     "country": "Taiwan",
     "level": 1,
     "details": "Exercise normal precautions in Taiwan.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/taiwan-travel-advisory.html"
   },
   {
     "country": "Tajikistan",
     "level": 2,
-    "details": "Exercise increased caution in Tajikistan due to terrorism, unexploded landmines, and the potential for political violence. Some areas have increased risk.",
-    "lastUpdated": "2023-08-01"
+    "details": "Exercise increased caution in Tajikistan due to terrorism, unexploded landmines, and the potential for political violence.",
+    "lastUpdated": "2023-08-01",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tajikistan-travel-advisory.html"
   },
   {
     "country": "Tanzania",
     "level": 2,
     "details": "Exercise increased caution in Tanzania due to crime, terrorism, and targeting of LGBTI persons. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tanzania-travel-advisory.html"
   },
   {
     "country": "Thailand",
     "level": 1,
-    "details": "Exercise normal precautions in Thailand. Some areas have increased risk.",
-    "lastUpdated": "2023-10-05"
+    "details": "Exercise normal precautions in Thailand.",
+    "lastUpdated": "2023-10-05",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/thailand-travel-advisory.html"
   },
   {
     "country": "Timor-Leste",
     "level": 2,
     "details": "Exercise increased caution in Timor-Leste due to crime and civil unrest.",
-    "lastUpdated": "2024-03-27"
+    "lastUpdated": "2024-03-27",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/timor-leste-travel-advisory.html"
   },
   {
     "country": "Togo",
     "level": 3,
     "details": "Reconsider travel to Togo due to crime and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/togo-travel-advisory.html"
   },
   {
     "country": "Tonga",
     "level": 1,
     "details": "Exercise normal precautions in Tonga.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tonga-travel-advisory.html"
   },
   {
     "country": "Trinidad and Tobago",
     "level": 3,
-    "details": "Reconsider travel to Trinidad and Tobago due to crime. Some areas have increased risk.",
-    "lastUpdated": "2024-05-15"
+    "details": "Reconsider travel to Trinidad and Tobago due to crime.",
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/trinidad-and-tobago-travel-advisory.html"
   },
   {
     "country": "Tunisia",
     "level": 2,
-    "details": "Exercise increased caution in Tunisia due to terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
-  },
-  {
-    "country": "Türkiye (Turkey)",
-    "level": 2,
-    "details": "Exercise increased caution when traveling to Türkiye due to terrorism and arbitrary detentions. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise increased caution in Tunisia due to terrorism.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tunisia-travel-advisory.html"
   },
   {
     "country": "Turkmenistan",
     "level": 2,
     "details": "Exercise increased caution in Turkmenistan due to arbitrary enforcement of local laws and terrorism. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/turkmenistan-travel-advisory.html"
   },
   {
     "country": "Tuvalu",
     "level": 1,
     "details": "Exercise normal precautions in Tuvalu.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/tuvalu-travel-advisory.html"
+  },
+  {
+    "country": "Türkiye (Turkey)",
+    "level": 2,
+    "details": "Exercise increased caution when traveling to Türkiye due to terrorism and arbitrary detentions. Some areas have increased risk.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/turkiye-travel-advisory.html"
   },
   {
     "country": "Uganda",
     "level": 3,
     "details": "Reconsider travel to Uganda due to crime, terrorism, and anti-LGBTQI+ legislation. Some areas have increased risk.",
-    "lastUpdated": "2024-02-09"
+    "lastUpdated": "2024-02-09",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/uganda-travel-advisory.html"
   },
   {
     "country": "Ukraine",
     "level": 4,
     "details": "Do not travel to Ukraine due to Russia’s full-scale invasion.",
-    "lastUpdated": "2024-02-20"
+    "lastUpdated": "2024-02-20",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ukraine-travel-advisory.html"
   },
   {
     "country": "United Arab Emirates",
     "level": 2,
     "details": "Exercise increased caution in the United Arab Emirates due to the threat of missile or drone attacks.",
-    "lastUpdated": "2023-12-19"
+    "lastUpdated": "2023-12-19",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/united-arab-emirates-travel-advisory.html"
   },
   {
     "country": "United Kingdom",
     "level": 2,
     "details": "Exercise increased caution in the United Kingdom due to terrorism.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/united-kingdom-travel-advisory.html"
   },
   {
     "country": "Uruguay",
     "level": 2,
     "details": "Exercise increased caution in Uruguay due to crime.",
-    "lastUpdated": "2024-05-15"
+    "lastUpdated": "2024-05-15",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/uruguay-travel-advisory.html"
   },
   {
     "country": "Uzbekistan",
     "level": 1,
-    "details": "Exercise normal precautions in Uzbekistan. Some areas have increased risk.",
-    "lastUpdated": "2023-07-26"
+    "details": "Exercise normal precautions in Uzbekistan.",
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/uzbekistan-travel-advisory.html"
   },
   {
     "country": "Vanuatu",
     "level": 1,
     "details": "Exercise normal precautions in Vanuatu.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/vanuatu-travel-advisory.html"
   },
   {
     "country": "Venezuela",
     "level": 4,
     "details": "Do not travel to Venezuela due to crime, civil unrest, kidnapping, and the arbitrary enforcement of local laws. Reconsider travel due to wrongful detentions, terrorism, and poor health infrastructure.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/venezuela-travel-advisory.html"
   },
   {
     "country": "Vietnam",
     "level": 1,
     "details": "Exercise normal precautions in Vietnam.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2023-07-26",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/vietnam-travel-advisory.html"
   },
   {
     "country": "Yemen",
     "level": 4,
     "details": "Do not travel to Yemen due to terrorism, civil unrest, health risks, kidnapping, armed conflict, and landmines.",
-    "lastUpdated": "2023-07-26"
+    "lastUpdated": "2024-07-29",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/yemen-travel-advisory.html"
   },
   {
     "country": "Zambia",
     "level": 2,
     "details": "Exercise increased caution in Zambia due to crime.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/zambia-travel-advisory.html"
   },
   {
     "country": "Zimbabwe",
     "level": 2,
     "details": "Exercise increased caution in Zimbabwe due to crime.",
-    "lastUpdated": "2024-04-22"
+    "lastUpdated": "2024-04-22",
+    "link": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/zimbabwe-travel-advisory.html"
   }
 ]

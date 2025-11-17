@@ -96,18 +96,18 @@ const SuppliersView: React.FC = () => {
     { header: 'Province/State', accessor: 'province' },
     { header: 'Country', accessor: 'country' },
     { header: 'Status', accessor: (item: SupplierMock) => (
-        <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${item.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-            {item.status}
-        </span>
+      <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${item.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        {item.status}
+      </span>
     )},
     {
-        header: 'Actions',
-        accessor: (item: SupplierMock) => (
-            <div className="flex space-x-2">
-                <button onClick={() => handleOpenModal(item)} className="text-indigo-600 hover:text-indigo-900"><PencilIcon className="w-5 h-5" /></button>
-                <button onClick={() => handleDelete(item.cageCode)} className="text-red-600 hover:text-red-900"><TrashIcon className="w-5 h-5" /></button>
-            </div>
-        )
+      header: 'Actions',
+      accessor: (item: SupplierMock) => (
+        <div className="flex space-x-2">
+            <button onClick={() => handleOpenModal(item)} className="text-indigo-600 hover:text-indigo-900"><PencilIcon className="w-5 h-5" /></button>
+            <button onClick={() => handleDelete(item.cageCode)} className="text-red-600 hover:text-red-900"><TrashIcon className="w-5 h-5" /></button>
+        </div>
+      )
     }
   ];
 
@@ -119,15 +119,15 @@ const SuppliersView: React.FC = () => {
           <p className="text-slate-500 mt-1">Commercial and Government Entity (CAGE) Code Suppliers</p>
         </div>
         <div className="flex space-x-2">
-            <Button onClick={() => handleOpenModal()}>Create New Supplier</Button>
-            <Button onClick={handleFetch} disabled={loading} leftIcon={<ArrowDownTrayIcon className="w-5 h-5" />}>
-                {loading ? 'Fetching...' : 'Refetch Data'}
+          <Button onClick={() => handleOpenModal()}>Create New Supplier</Button>
+          <Button onClick={handleFetch} disabled={loading} leftIcon={<ArrowDownTrayIcon className="w-5 h-5" />}>
+            {loading ? 'Fetching...' : 'Refetch Data'}
+          </Button>
+          {data && data.length > 0 && (
+            <Button onClick={handleDownload} variant="secondary" leftIcon={<DocumentDuplicateIcon className="w-5 h-5" />}>
+              Download JSON
             </Button>
-            {data && data.length > 0 && (
-                <Button onClick={handleDownload} variant="secondary" leftIcon={<DocumentDuplicateIcon className="w-5 h-5" />}>
-                    Download JSON
-                </Button>
-            )}
+          )}
         </div>
       </div>
 
@@ -208,25 +208,25 @@ const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, 
     return (
         <Modal isOpen={isOpen} onClose={onClose} title={supplier ? 'Edit Supplier' : 'Create New Supplier'}>
             <form onSubmit={handleSubmit} className="space-y-4">
-                 <div>
+                <div>
                     <label htmlFor="companyName" className="block text-sm font-medium text-slate-700">Company Name</label>
                     <input type="text" name="companyName" id="companyName" value={formData.companyName} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                 </div>
-                 {!supplier && (
+                {!supplier && (
                     <div>
                         <label htmlFor="cageCode" className="block text-sm font-medium text-slate-700">CAGE Code</label>
                         <input type="text" name="cageCode" id="cageCode" onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                     </div>
                 )}
-                 <div>
+                <div>
                     <label htmlFor="address" className="block text-sm font-medium text-slate-700">Address</label>
                     <input type="text" name="address" id="address" value={formData.address} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                 </div>
-                 <div>
+                <div>
                     <label htmlFor="city" className="block text-sm font-medium text-slate-700">City</label>
                     <input type="text" name="city" id="city" value={formData.city} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                 </div>
-                 <div>
+                <div>
                     <label htmlFor="province" className="block text-sm font-medium text-slate-700">Province/State</label>
                     <input type="text" name="province" id="province" value={formData.province} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                 </div>
@@ -234,11 +234,11 @@ const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, 
                     <label htmlFor="zip" className="block text-sm font-medium text-slate-700">Zip/Postal Code</label>
                     <input type="text" name="zip" id="zip" value={formData.zip} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                 </div>
-                 <div>
+                <div>
                     <label htmlFor="country" className="block text-sm font-medium text-slate-700">Country</label>
                     <input type="text" name="country" id="country" value={formData.country} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                 </div>
-                 <div>
+                <div>
                     <label htmlFor="status" className="block text-sm font-medium text-slate-700">Status</label>
                     <select name="status" id="status" value={formData.status} onChange={handleChange} className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                         <option>Active</option>

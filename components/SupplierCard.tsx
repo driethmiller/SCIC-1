@@ -7,6 +7,7 @@ import { ShieldCheckIcon } from './icons/ShieldCheckIcon';
 
 interface SupplierCardProps {
   supplier: Supplier;
+  onClick: () => void;
 }
 
 const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string | null | undefined }> = ({ icon, label, value }) => {
@@ -20,7 +21,7 @@ const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string
     );
 };
 
-const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
+const SupplierCard: React.FC<SupplierCardProps> = ({ supplier, onClick }) => {
   const fullAddress = [
     supplier.SupplierAddress,
     supplier.City,
@@ -30,11 +31,19 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
   ].filter(Boolean).join(', ');
 
   return (
-    <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-blue-500/50 hover:scale-[1.02] flex flex-col">
+    <button
+      onClick={onClick}
+      className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-blue-500/50 hover:scale-[1.02] flex flex-col text-left w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100 focus:ring-blue-500"
+      aria-label={`View details for ${supplier.SupplierName}`}
+    >
       <div className="p-5 flex-grow flex flex-col">
         <div className="mb-4">
           <h3 className="text-lg font-bold text-blue-300 break-words">{supplier.SupplierName || 'No Name Provided'}</h3>
-          <p className="text-xs text-gray-400">{supplier.SupplierNo}&nbsp;&nbsp;&nbsp;&nbsp;CAGE: {supplier.CAGECodeConcat} ( {supplier.CAGEStatus.Description} )&nbsp;&nbsp;&nbsp;&nbsp;UEI: {supplier.UEID}</p>
+          <p className="text-xs text-gray-400">
+            {supplier.SupplierNo}&nbsp;&nbsp;&nbsp;&nbsp;
+            CAGE: {supplier.CAGECodeConcat} {supplier.CAGEStatus ? `( ${supplier.CAGEStatus.Description} )` : ''}&nbsp;&nbsp;&nbsp;&nbsp;
+            UEI: {supplier.UEID || 'N/A'}
+          </p>
         </div>
 
         <div className="space-y-3 flex-grow mb-4">
@@ -52,6 +61,7 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm text-blue-400 hover:text-blue-300 hover:underline transition-colors"
+              onClick={(e) => e.stopPropagation()} // Prevent modal from opening when clicking the link
             >
               Visit Website
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +71,7 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier }) => {
           </div>
         )}
       </div>
-    </div>
+    </button>
   );
 };
 

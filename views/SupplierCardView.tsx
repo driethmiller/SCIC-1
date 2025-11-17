@@ -4,6 +4,8 @@ import { fetchSuppliers } from '../services/apiService_Supplier';
 import { PAGE_SIZE } from '../constants';
 import SupplierCard from '../components/SupplierCard';
 import Pagination from '../components/Pagination';
+import SupplierDetailModal from '../components/SupplierDetailModal';
+import Button from '../components/Button';
 
 // Loading Spinner Component
 const LoadingSpinner: React.FC = () => (
@@ -27,12 +29,7 @@ interface SearchBarProps {
 }
 const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => {
   return (
-    <div className="relative mb-6">
-      <div className="bg-white p-6 rounded-lg shadow-sm flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-800">Search Basic Supplier Information</h2>
-        </div>
-      </div>
+    <div className="relative">
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg className="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -43,12 +40,11 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
         placeholder="Search by supplier name / number / address / CAGE code / status / UEI / zip / postal code"
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
-        className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        className="block w-full bg-white border border-gray-300 rounded-md py-3 pl-10 pr-4 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
       />
     </div>
   );
 };
-
 
 const SupplierCardView: React.FC = () => {
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
@@ -58,9 +54,8 @@ const SupplierCardView: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState<string>('');
-  const [allSuppliers, setAllSupports] = useState<Supplier[]>([]);
-  const [selectedLevel, setSelectedLevel] = useState<string>('all');
-  const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
+  const [selectedSupplier, setSelectedSupplier] = useState<Supplier | null>(null);
+  const [isCreating, setIsCreating] = useState<boolean>(false);
 
   useEffect(() => {
     const timerId = setTimeout(() => {
@@ -76,7 +71,7 @@ const SupplierCardView: React.FC = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const data = await fetchSuppliers(currentPage, debouncedSearchTerm);
+      const data = await fetchSuppliers(currentPage, debouncedSearchTerm, '', 'All');
       setSuppliers(data.value);
       setTotalCount(data['@odata.count']);
     } catch (err) {
@@ -96,37 +91,58 @@ const SupplierCardView: React.FC = () => {
     loadSuppliers();
   }, [loadSuppliers]);
 
-{/*
-  // Try filters example of RSSAdvisory
-  const filteredAndSortedAdvisories = useMemo(() => {
-    let result = [...allSuppliers];
-
-    if (selectedLevel !== 'all') {
-      result = result.filter(advisory => advisory.level === parseInt(selectedLevel, 10));
-    }
-
-    if (searchTerm) {
-      result = result.filter(advisory =>
-        advisory.country.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    result.sort((a, b) => {
-      const dateA = new Date(a.pubDate).getTime();
-      const dateB = new Date(b.pubDate).getTime();
-      return sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
-    });
-
-    return result;
-  }, [searchTerm, selectedLevel, sortOrder, allSuppliers]);
-  // End-Try
-  */}
-
   const totalPages = useMemo(() => Math.ceil(totalCount / PAGE_SIZE), [totalCount]);
+  
+  const handleCardClick = (supplier: Supplier) => {
+    setSelectedSupplier(supplier);
+    setIsCreating(false);
+  };
+  
+  const handleOpenCreateModal = () => {
+      setSelectedSupplier(null);
+      setIsCreating(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedSupplier(null);
+    setIsCreating(false);
+  };
+  
+  const handleCreateSupplier = (newSupplier: Supplier) => {
+    // In a real app, this would be a POST request to an API.
+    // For this example, we add it to the local state at the top of the list.
+    setSuppliers(prevSuppliers => [newSupplier, ...prevSuppliers]);
+    setTotalCount(prevCount => prevCount + 1);
+  };
+
+  const handleSaveSupplier = (updatedSupplier: Supplier) => {
+    // In a real application, you would make an API call to save the data.
+    // For this example, we'll just update the state in memory.
+    setSuppliers(prevSuppliers => 
+        prevSuppliers.map(s => 
+            s.SupplierNo === updatedSupplier.SupplierNo ? updatedSupplier : s
+        )
+    );
+  };
+
+  const handleDeleteSupplier = (supplierNo: string) => {
+      // In a real application, you would make an API call to delete the data.
+      // For this example, we'll just update the state in memory.
+      setSuppliers(prevSuppliers => 
+          prevSuppliers.filter(s => s.SupplierNo !== supplierNo)
+      );
+      handleCloseModal(); // Ensure modal is closed after deletion
+  };
 
   return (
     <div className="space-y-6">
-      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+       <div className="bg-white p-6 rounded-lg shadow-sm sticky top-0 z-10">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
+            <h2 className="text-2xl font-bold text-slate-800 mb-2 sm:mb-0">Basic Supplier Information</h2>
+            <Button onClick={handleOpenCreateModal}>Create New Supplier</Button>
+        </div>
+        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      </div>
 
       {error && <ErrorMessage message={error} />}
 
@@ -138,13 +154,19 @@ const SupplierCardView: React.FC = () => {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {suppliers.map((supplier) => (
-                  <SupplierCard key={supplier.SupplierNo} supplier={supplier} />
+                  <SupplierCard 
+                    key={supplier.SupplierNo} 
+                    supplier={supplier} 
+                    onClick={() => handleCardClick(supplier)}
+                  />
                 ))}
               </div>
                 <Pagination
                   currentPage={currentPage}
                   totalPages={totalPages}
                   onPageChange={setCurrentPage}
+                  totalCount={totalCount}
+                  itemName="suppliers"
                 />
             </>
           ) : (
@@ -152,6 +174,19 @@ const SupplierCardView: React.FC = () => {
           )}
         </>
       )}
+      <SupplierDetailModal 
+        supplier={selectedSupplier}
+        isCreating={isCreating}
+        onClose={handleCloseModal}
+        onSave={(supplier) => {
+            if (isCreating) {
+                handleCreateSupplier(supplier);
+            } else {
+                handleSaveSupplier(supplier);
+            }
+        }}
+        onDelete={handleDeleteSupplier}
+      />
     </div>
   );
 };

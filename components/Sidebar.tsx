@@ -19,7 +19,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapse
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: <HomeIcon className="w-6 h-6" /> },
     { id: 'SupplierInfo', label: 'Supplier Info', icon: <ClipboardDocumentListIcon className="w-6 h-6" /> },
-    { id: 'RSSAdvisories', label: 'RSS Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
     { id: 'SupplierMock', label: 'Supplier Mock', icon: <DocumentTextIcon className="w-6 h-6" /> },
     { id: 'SupplierTest', label: 'Supplier Test', icon: <IdentificationIcon className="w-6 h-6" /> },

@@ -41,7 +41,8 @@ const SupplierTestView: React.FC = () => {
     setIsLoading(true);
     setError(null);
     try {
-      const data = await fetchSuppliers(currentPage, debouncedSearchTerm);
+      // FIX: Added missing arguments for country and cageStatus to the fetchSuppliers call.
+      const data = await fetchSuppliers(currentPage, debouncedSearchTerm, '', 'All');
       setSuppliers(data.value);
       setTotalCount(data['@odata.count']);
     } catch (err) {

@@ -14,7 +14,7 @@ export interface Supplier {
   StateProvince: { Caption: string } | null;
   Province: { Caption: string } | null;
   CountryList: { Caption: string };
-  CAGEStatus: { Description:string };
+  CAGEStatus: { Description:string } | null;
 }
 
 export interface ApiResponse_Supplier {
@@ -24,9 +24,10 @@ export interface ApiResponse_Supplier {
 
 export interface TravelAdvisory {
   country: string;
+  lastUpdated: string;
   level: number;
   details: string;
-  lastUpdated: string;
+  link: string;
 }
 
 export interface RSSAdvisory {
