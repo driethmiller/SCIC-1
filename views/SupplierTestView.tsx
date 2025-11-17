@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
-// fix: Import SupplierMock as this view uses the mock data service.
-import { Supplier } from '../types';
+// fix: Aliased SupplierAPI as Supplier to resolve type mismatches throughout the component.
+import { SupplierAPI as Supplier } from '../types';
 import { fetchSuppliers } from '../services/apiService_Supplier';
 import DataTable, { Column } from '../components/DataTable';
 import Button from '../components/Button';
@@ -13,12 +13,12 @@ import { TrashIcon } from '../components/icons/TrashIcon';
 
 
 const SupplierTestView: React.FC = () => {
-  // fix: Use SupplierMock for state.
+  // fix: Use Supplier (aliased to SupplierAPI) for state.
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // fix: Use SupplierMock for state.
+  // fix: Use Supplier (aliased to SupplierAPI) for state.
   const [editingSupplier, setEditingSupplier] = useState<Supplier | null>(null);
   const [totalCount, setTotalCount] = useState<number>(0);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -43,6 +43,7 @@ const SupplierTestView: React.FC = () => {
     try {
       // FIX: Added missing arguments for country and cageStatus to the fetchSuppliers call.
       const data = await fetchSuppliers(currentPage, debouncedSearchTerm, '', 'All');
+      // fix: The type of data.value (SupplierAPI[]) now matches the state type.
       setSuppliers(data.value);
       setTotalCount(data['@odata.count']);
     } catch (err) {
@@ -77,7 +78,7 @@ const SupplierTestView: React.FC = () => {
     URL.revokeObjectURL(url);
   };
   
-  // fix: Use SupplierMock for parameter.
+  // fix: Use Supplier (aliased to SupplierAPI) for parameter.
   const handleOpenModal = (supplier: Supplier | null = null) => {
     setEditingSupplier(supplier);
     setIsModalOpen(true);
@@ -88,11 +89,12 @@ const SupplierTestView: React.FC = () => {
     setEditingSupplier(null);
   };
   
-  // fix: Use SupplierMock for parameter.
+  // fix: Use Supplier (aliased to SupplierAPI) for parameter.
   // Fix: Corrected function signature typos and implementation to handle supplier creation/updates correctly.
   const handleSave = (formData: Omit<Supplier, 'CAGECodeConcat'> & { CAGECodeConcat?: string }) => {
     if (editingSupplier) {
       // Update
+      // fix: CAGECodeConcat is a valid property on the aliased Supplier type.
       setSuppliers(suppliers.map(s => s.CAGECodeConcat === editingSupplier.CAGECodeConcat ? { ...s, ...formData } as Supplier : s));
     } else {
       // Create
@@ -107,12 +109,13 @@ const SupplierTestView: React.FC = () => {
 
   const handleDelete = (cageCode: string) => {
     if (window.confirm('Are you sure you want to delete this supplier?')) {
+      // fix: CAGECodeConcat is a valid property on the aliased Supplier type.
       setSuppliers(suppliers.filter(s => s.CAGECodeConcat !== cageCode));
     }
   };
 
 
-  // fix: Use SupplierMock for column definitions.
+  // fix: Use Supplier (aliased to SupplierAPI) for column definitions, making accessors valid.
   const columns: Column<Supplier>[] = [
     { header: 'CAGE Code', accessor: 'CAGECodeConcat' },
     { header: 'Supplier Name', accessor: 'SupplierName' },
@@ -186,6 +189,7 @@ const SupplierTestView: React.FC = () => {
       
       {!loading && !error && suppliers && (
         suppliers.length > 0 ? (
+          // fix: keyAccessor "CAGECodeConcat" is a valid key of the aliased Supplier type.
           <DataTable data={suppliers} columns={columns} keyAccessor="CAGECodeConcat" />
         ) : (
           <div className="text-center py-12 bg-white rounded-lg shadow-sm">
@@ -206,13 +210,13 @@ const SupplierTestView: React.FC = () => {
 interface SupplierFormModalProps {
     isOpen: boolean;
     onClose: () => void;
-    // fix: Use SupplierMock for props.
+    // fix: Use Supplier (aliased to SupplierAPI) for props.
     onSave: (data: Omit<Supplier, 'CAGECodeConcat'> & { CAGECodeConcat?: string }) => void;
     supplier: Supplier | null;
 }
 
 const SupplierFormModal: React.FC<SupplierFormModalProps> = ({ isOpen, onClose, onSave, supplier }) => {
-    // fix: Use SupplierMock for form data state.
+    // fix: Use Supplier (aliased to SupplierAPI) for form data state, making properties valid.
     // Fix: Added missing `Contracts` property and corrected `CountryList` to align with the `Supplier` type.
     const [formData, setFormData] = useState<Omit<Supplier, 'CAGECodeConcat'>>({
       SupplierName: '',

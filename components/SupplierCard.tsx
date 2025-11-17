@@ -1,12 +1,14 @@
 import React from 'react';
-import { Supplier } from '../types';
+// fix: Changed type from Supplier to SupplierAPI to match the properties being used.
+import { SupplierAPI } from '../types';
 import { HashtagIcon } from './icons/HashtagIcon';
 import { BarcodeIcon } from './icons/BarcodeIcon';
 import { IdentificationIcon } from './icons/IdentificationIcon';
 import { ShieldCheckIcon } from './icons/ShieldCheckIcon';
 
 interface SupplierCardProps {
-  supplier: Supplier;
+  // fix: Changed type from Supplier to SupplierAPI to match the properties being used.
+  supplier: SupplierAPI;
   onClick: () => void;
 }
 
@@ -22,6 +24,7 @@ const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string
 };
 
 const SupplierCard: React.FC<SupplierCardProps> = ({ supplier, onClick }) => {
+  // fix: Properties like SupplierAddress, City, etc. exist on SupplierAPI, not Supplier.
   const fullAddress = [
     supplier.SupplierAddress,
     supplier.City,
@@ -34,12 +37,15 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier, onClick }) => {
     <button
       onClick={onClick}
       className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-blue-500/50 hover:scale-[1.02] flex flex-col text-left w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100 focus:ring-blue-500"
+      // fix: Properties like SupplierName exist on SupplierAPI, not Supplier.
       aria-label={`View details for ${supplier.SupplierName}`}
     >
       <div className="p-5 flex-grow flex flex-col">
         <div className="mb-4">
+          {/* fix: Properties like SupplierName exist on SupplierAPI, not Supplier. */}
           <h3 className="text-lg font-bold text-blue-300 break-words">{supplier.SupplierName || 'No Name Provided'}</h3>
           <p className="text-xs text-gray-400">
+            {/* fix: Properties like SupplierNo, CAGECodeConcat, CAGEStatus, UEID exist on SupplierAPI, not Supplier. */}
             {supplier.SupplierNo}&nbsp;&nbsp;&nbsp;&nbsp;
             CAGE: {supplier.CAGECodeConcat} {supplier.CAGEStatus ? `( ${supplier.CAGEStatus.Description} )` : ''}&nbsp;&nbsp;&nbsp;&nbsp;
             UEI: {supplier.UEID || 'N/A'}
@@ -54,9 +60,11 @@ const SupplierCard: React.FC<SupplierCardProps> = ({ supplier, onClick }) => {
           />
         </div>
 
+        {/* fix: Property SupplierWebsite exists on SupplierAPI, not Supplier. */}
         {supplier.SupplierWebsite && (
           <div className="mt-auto pt-4 border-t border-gray-700">
             <a
+              // fix: Property SupplierWebsite exists on SupplierAPI, not Supplier.
               href={supplier.SupplierWebsite.startsWith('http') ? supplier.SupplierWebsite : `https://${supplier.SupplierWebsite}`}
               target="_blank"
               rel="noopener noreferrer"

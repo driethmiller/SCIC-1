@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { Supplier } from '../types';
+// fix: Aliased SupplierAPI as Supplier to match the component's usage and fix type errors.
+import { SupplierAPI as Supplier } from '../types';
 import { fetchSuppliers } from '../services/apiService_Supplier';
 import { PAGE_SIZE } from '../constants';
 import SupplierCard from '../components/SupplierCard';
@@ -72,6 +73,7 @@ const SupplierCardView: React.FC = () => {
     setError(null);
     try {
       const data = await fetchSuppliers(currentPage, debouncedSearchTerm, '', 'All');
+      // fix: setSuppliers now correctly receives SupplierAPI[] which is aliased to Supplier[].
       setSuppliers(data.value);
       setTotalCount(data['@odata.count']);
     } catch (err) {
@@ -119,6 +121,7 @@ const SupplierCardView: React.FC = () => {
     // In a real application, you would make an API call to save the data.
     // For this example, we'll just update the state in memory.
     setSuppliers(prevSuppliers => 
+        // fix: SupplierNo is a valid property on the aliased Supplier (SupplierAPI) type.
         prevSuppliers.map(s => 
             s.SupplierNo === updatedSupplier.SupplierNo ? updatedSupplier : s
         )
@@ -129,6 +132,7 @@ const SupplierCardView: React.FC = () => {
       // In a real application, you would make an API call to delete the data.
       // For this example, we'll just update the state in memory.
       setSuppliers(prevSuppliers => 
+          // fix: SupplierNo is a valid property on the aliased Supplier (SupplierAPI) type.
           prevSuppliers.filter(s => s.SupplierNo !== supplierNo)
       );
       handleCloseModal(); // Ensure modal is closed after deletion
@@ -155,6 +159,7 @@ const SupplierCardView: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {suppliers.map((supplier) => (
                   <SupplierCard 
+                    // fix: SupplierNo is a valid property on the aliased Supplier (SupplierAPI) type.
                     key={supplier.SupplierNo} 
                     supplier={supplier} 
                     onClick={() => handleCardClick(supplier)}

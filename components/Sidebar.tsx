@@ -21,6 +21,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapse
     { id: 'SupplierInfo', label: 'Supplier Info', icon: <ClipboardDocumentListIcon className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
     { id: 'SupplierMock', label: 'Supplier Mock', icon: <DocumentTextIcon className="w-6 h-6" /> },
+    { id: 'Suppliers', label: 'Suppliers', icon: <DocumentTextIcon className="w-6 h-6" /> },
     { id: '----------', label: '==========' },
     { id: 'SupplierTest', label: 'Supplier Test', icon: <IdentificationIcon className="w-6 h-6" /> },
   ];

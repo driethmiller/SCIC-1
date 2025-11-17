@@ -1,6 +1,6 @@
-export type ViewType = 'dashboard' | 'Suppliers' | 'SupplierInfo' | 'TravelAdvisories' | 'RSSAdvisories' | 'SupplierMock' | 'SupplierTest' | '----------';
+export type ViewType = 'dashboard' | 'SupplierInfo' | 'TravelAdvisories' | 'RSSAdvisories' | 'SupplierMock' | 'SupplierTest' | '----------' | 'Suppliers';
 
-export interface Supplier {
+export interface SupplierAPI {
   SupplierNo: string;
   SupplierName: string;
   CAGECodeConcat: string;
@@ -21,7 +21,7 @@ export interface Supplier {
 
 export interface ApiResponse_Supplier {
   '@odata.count': number;
-  value: Supplier[];
+  value: SupplierAPI[];
 }
 
 export interface TravelAdvisory {
@@ -54,3 +54,31 @@ export interface SupplierMock {
   lat?: number;
   lon?: number;
 }
+
+// Dave's
+// Fix: Replaced incorrect file content with proper type definitions and exports.
+
+export interface Supplier {
+  id: string;
+  name: string;
+  category: string;
+  location: string;
+  fullAddress: string;
+  description: string;
+  logoUrl: string;
+  cageCode: string;
+  ueid: string;
+  contractIds: string[];
+  countryCode: string;
+  parentId?: string;
+}
+
+export interface Contract {
+  id: string;
+  name: string;
+  contractNumber: string;
+  description: string;
+  supplierIds: string[];
+}
+
+export type UserRole = 'SCIC Contributor' | 'SCIC Read-Only';

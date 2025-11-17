@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Supplier } from '../types';
+// fix: Aliased SupplierAPI as Supplier to match the properties used in this component.
+import { SupplierAPI as Supplier } from '../types';
 import Modal from './Modal';
 import Button from './Button';
 
@@ -48,6 +49,7 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
   useEffect(() => {
     if (isCreating) {
       setIsEditing(true);
+      // fix: The properties of this object are valid for the aliased Supplier (SupplierAPI) type.
       setFormData({
         SupplierNo: '',
         SupplierName: '',
@@ -87,6 +89,7 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
   };
   
   const handleDelete = () => {
+    // fix: SupplierName and SupplierNo are valid properties on the aliased Supplier (SupplierAPI) type.
     if (supplier && window.confirm(`Are you sure you want to delete ${supplier.SupplierName}? This action cannot be undone.`)) {
       onDelete(supplier.SupplierNo);
       onClose();
@@ -95,6 +98,7 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
 
   const renderReadOnlyView = () => {
     if (!supplier) return null;
+    // fix: All properties accessed here are valid on the aliased Supplier (SupplierAPI) type.
     const fullAddress = [
       supplier.SupplierAddress,
       supplier.City,
@@ -189,6 +193,7 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
                  <>
                     <div>
                         <label htmlFor="SupplierNo" className="block text-sm font-medium text-slate-700">Supplier Number</label>
+                        {/* fix: formData properties are now valid on the aliased Supplier (SupplierAPI) type. */}
                         <input type="text" name="SupplierNo" id="SupplierNo" value={formData.SupplierNo || ''} onChange={handleChange} required className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"/>
                     </div>
                      <div>
@@ -237,6 +242,7 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ supplier, onC
   );
 
   return (
+    // fix: SupplierName is a valid property on the aliased Supplier (SupplierAPI) type.
     <Modal isOpen={!!supplier || isCreating} onClose={onClose} title={isCreating ? 'Create New Supplier' : (isEditing ? `Editing ${supplier.SupplierName}` : supplier.SupplierName)} size="3xl">
       {isEditing ? renderEditView() : renderReadOnlyView()}
     </Modal>
