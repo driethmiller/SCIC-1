@@ -1,6 +1,32 @@
 
 import React from 'react';
-import { SupplierData } from '../modules/types';
+import { SupplierData, CAGEStatus } from '../modules/types';
+
+interface CAGEStatusProps {
+  cageStatus: CAGEStatus;
+}
+const getStatusInfo = (Code: string) => {
+    switch(Code) {
+        case '1': return { text: 'Proposed Debarment', color: 'bg-blue-900/50 text-red-300', borderColor: 'border-red-500' };
+        case '2': return { text: 'Suspended', color: 'bg-yellow-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'A': return { text: 'Active', color: 'bg-green-900/30 text-green-400', borderColor: 'border-green-800' };
+        case 'C': return { text: 'Restraint', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'E': return { text: 'Debarred', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'F': return { text: 'Obsolete', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'J': return { text: 'Specialized Use', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'N': return { text: 'Cancelled', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'P': return { text: 'Cancelled Without Replacement', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'R': return { text: 'Cancelled/Replaced', color: 'bg-red-900/50 text-red-300', borderColor: 'border-red-500' };
+        case 'W': return { text: 'Active With Restraint', color: 'bg-green-900/30 text-blue-400', borderColor: 'border-blue-800' };
+        case 'Y': return { text: 'Active Specialized Use', color: 'bg-green-900/30 text-blue-400', borderColor: 'border-blue-800' };
+        default: return { text: 'Unknown', color: 'bg-gray-700 text-gray-300', borderColor: 'border-gray-500' };
+    }
+}
+
+const StatusInfo: React.FC<CAGEStatusProps> = ( cageStatus ) => {
+
+  return null;
+}
 
 interface SupplierCardProps {
   supplier: SupplierData;
@@ -26,6 +52,10 @@ const SupplierDataCard: React.FC<SupplierCardProps> = ({ supplier }) => {
     supplier.Country?.CountryName
   ].filter(Boolean).join(', ');
 
+  // To resolve the cageStatus error on search
+  const cageStatusCode = supplier.CAGEStatus?.Code;
+  const cageStatus = supplier.CAGEStatus?.Description;
+
   return (
     <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-blue-500/50 hover:scale-[1.02] flex flex-col">
       <div className="p-5 flex-grow flex flex-col">
@@ -34,11 +64,13 @@ const SupplierDataCard: React.FC<SupplierCardProps> = ({ supplier }) => {
           <p className="text-xs text-gray-400">
             {supplier.SupplierNumber} || {supplier.UEI} || {supplier.CAGECode}&nbsp;&nbsp;
             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${
-                supplier.CAGEStatus.Code === 'A' 
-                  ? 'bg-green-900/30 text-green-400 border-green-800' 
-                  : 'bg-red-900/30 text-red-400 border-red-800'
+                cageStatusCode === 'A'
+                 ? 'bg-green-900/30 text-green-400 border-green-800'
+                 : cageStatusCode === 'W' || cageStatusCode === 'Y'
+                 ? 'bg-blue-900/30 text-blue-400 border-blue-800' 
+                 : 'bg-red-900/30 text-red-400 border-red-800'
               }`}>
-                {supplier.CAGEStatus.Description || 'N/A'}
+              {cageStatus || 'N/A'}
             </span>
           </p>
         </div>

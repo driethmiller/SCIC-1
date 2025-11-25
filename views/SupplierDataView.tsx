@@ -84,25 +84,26 @@ const SupplierDataView: React.FC = () => {
     if (searchTerm) {
       const lowerTerm = searchTerm.toLowerCase();
       result = result.filter(item => 
-        (item.SupplierName && item.SupplierName.toLowerCase().includes(lowerTerm)) ||
-        (item.SupplierNumber && item.SupplierNumber.toLowerCase().includes(lowerTerm)) ||
-        (item.CAGECode && item.CAGECode.toLowerCase().includes(lowerTerm)) ||
-        (item.UEI && item.UEI.toLowerCase().includes(lowerTerm)) ||
-        (item.Street && item.Street.toLowerCase().includes(lowerTerm)) ||
-        (item.City && item.City.toLowerCase().includes(lowerTerm)) ||
-        (item.Territory && item.Territory.toLowerCase().includes(lowerTerm)) ||
-        (item.USAState && (
-          item.USAState.Alpha2.toLowerCase().includes(lowerTerm) || item.USAState.StateName.toLowerCase().includes(lowerTerm)
-        )) ||
-        (item.CANProvince && (
-          item.CANProvince.Alpha2.toLowerCase().includes(lowerTerm) || item.CANProvince.ProvinceName.toLowerCase().includes(lowerTerm)
-        )) ||
-        (item.Country && (
-          item.Country.Alpha3.toLowerCase().includes(lowerTerm) || item.Country.CountryName.toLowerCase().includes(lowerTerm)
-        )) ||
-        (item.CAGEStatus && (
-          item.CAGEStatus.Code.toLowerCase().includes(lowerTerm) || item.CAGEStatus.Description.toLowerCase().includes(lowerTerm)
-        ))
+          (item.SupplierName && item.SupplierName.toLowerCase().includes(lowerTerm))
+       || (item.SupplierNumber && item.SupplierNumber.toLowerCase().includes(lowerTerm))
+       || (item.CAGECode && item.CAGECode.toLowerCase().includes(lowerTerm))
+       || (item.UEI && item.UEI.toLowerCase().includes(lowerTerm))
+       || (item.Street && item.Street.toLowerCase().includes(lowerTerm))
+       || (item.City && item.City.toLowerCase().includes(lowerTerm))
+       || (item.Territory && item.Territory.toLowerCase().includes(lowerTerm))
+       || (item.USAState && (
+               item.USAState.Alpha2.toLowerCase().includes(lowerTerm)
+            || item.USAState.StateName.toLowerCase().includes(lowerTerm)
+          ))
+       || (item.CANProvince && (
+               item.CANProvince.Alpha2.toLowerCase().includes(lowerTerm)
+            || item.CANProvince.ProvinceName.toLowerCase().includes(lowerTerm)
+          ))
+       || (item.Country && (
+               item.Country.Alpha3.toLowerCase().includes(lowerTerm)
+            || item.Country.CountryName.toLowerCase().includes(lowerTerm)
+          )) 
+       || (item.CAGEStatus && ( item.CAGEStatus.Description.toLowerCase().includes(lowerTerm) ))
       );
     }
 
