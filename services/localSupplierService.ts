@@ -69,7 +69,6 @@ export const fetchSupplierData = async (): Promise<SupplierData[]> => {
   const enrichedData: SupplierData[] = rawData.map(raw => {
     return {
       SupplierNumber: raw.SupplierNumber,
-      Id: raw.Id,
       SupplierName: raw.SupplierName,
       CAGECode: raw.CAGECode,
       UEI: raw.UEI,
@@ -81,8 +80,10 @@ export const fetchSupplierData = async (): Promise<SupplierData[]> => {
       Website: raw.Website,
       USAState: raw.USAState ? (usaStateMap.get(raw.USAState) || null) : null,
       CANProvince: raw.CANProvince ? (canProvinceMap.get(raw.CANProvince) || null) : null,
-      Country: cacheCountry(countryMap, raw.Country),
+      Country: countryMap.get(raw.Country) || null,
       CAGEStatus: cageStatusMap.get(raw.CAGEStatus) || null,
+      CreatedBy: raw.CreatedBy,
+      DateCreated: raw.DateCreated,
     };
   });
 
@@ -93,3 +94,12 @@ export const fetchSupplierData = async (): Promise<SupplierData[]> => {
 function cacheCountry(map: Map<string, Country>, key: string): Country | null {
     return map.get(key) || null;
 }
+
+// dashboard
+let rawDataCache: RawSupplierData[] | null = null;
+export const fetchRawSupplierData = async (): Promise<RawSupplierData[]> => {
+  if (!rawDataCache) {
+    rawDataCache = await fetchData<RawSupplierData[]>('./data/SupplierData.json');
+  }
+  return rawDataCache;
+};

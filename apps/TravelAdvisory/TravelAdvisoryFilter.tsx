@@ -27,9 +27,9 @@ const TravelAdvisoryFilter: React.FC<FiltersProps> = ({
   onSortChange
 }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end sticky top-0 z-10">
       <div className="md:col-span-2">
-        <label htmlFor="search-country" className="block text-sm font-medium text-slate-700 mb-1">Search by country</label>
+        <label htmlFor="search-country" className="block text-sm font-medium mb-1 text-white">Search by country</label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg className="w-5 h-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -48,7 +48,7 @@ const TravelAdvisoryFilter: React.FC<FiltersProps> = ({
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label htmlFor="level-filter" className="block text-sm font-medium text-slate-700 mb-1">Filter by level</label>
+          <label htmlFor="level-filter" className="block text-sm font-medium mb-1 text-white">Filter by level</label>
           <select
             id="level-filter"
             value={selectedLevel}
@@ -63,7 +63,7 @@ const TravelAdvisoryFilter: React.FC<FiltersProps> = ({
           </select>
         </div>
         <div>
-           <label className="block text-sm font-medium text-slate-700 mb-1">Sort by date</label>
+           <label className="block text-sm font-medium mb-1 text-white">Sort by date</label>
           <button
             onClick={onSortChange}
             className="w-full flex items-center justify-center px-4 py-2 border border-slate-300 rounded-md shadow-sm text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

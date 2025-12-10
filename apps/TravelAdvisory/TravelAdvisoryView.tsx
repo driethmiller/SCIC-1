@@ -1,14 +1,14 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import { TravelAdvisory } from '../modules/types';
-import { fetchTravelAdvisories } from '../services/mockDataService';
-import Button from '../components/Button';
-import { ArrowDownTrayIcon } from '../icons/ArrowDownTrayIcon';
-import { DocumentDuplicateIcon } from '../icons/DocumentDuplicateIcon';
-import TravelAdvisoryCard from '../components/TravelAdvisoryCard';
-import TravelAdvisoryCardSkeleton from '../components/TravelAdvisoryCardSkeleton';
-import TravelAdvisoryFilter from '../components/TravelAdvisoryFilter';
-import Pagination from '../components/Pagination';
-import { PAGE_SIZE } from '../constants';
+import { TravelAdvisory } from '../../modules/types';
+import { fetchTravelAdvisories } from '../../services/mockDataService';
+import Button from '../../components/Button';
+import { ArrowDownTrayIcon } from '../../icons/ArrowDownTrayIcon';
+import { DocumentDuplicateIcon } from '../../icons/DocumentDuplicateIcon';
+import TravelAdvisoryCard from './TravelAdvisoryCard';
+import TravelAdvisoryCardSkeleton from './TravelAdvisoryCardSkeleton';
+import TravelAdvisoryFilter from './TravelAdvisoryFilter';
+import Pagination from '../../components/Pagination';
+import { PAGE_SIZE } from '../../constants';
 
 const TravelAdvisoriesView: React.FC = () => {
   const [data, setData] = useState<TravelAdvisory[]>([]);
@@ -94,10 +94,10 @@ const TravelAdvisoriesView: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow-sm sticky top-0 z-10">
+      <div className="p-6 rounded-lg shadow-sm">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">
           <div>
-            <h2 className="text-2xl font-bold text-slate-800">Travel Advisories</h2>
+            <h2 className="text-2xl font-bold text-white">Travel Advisories</h2>
             <p className="text-slate-500 mt-1">Source: travel.state.gov (Emulated)</p>
           </div>
           <div className="flex space-x-2 mt-4 md:mt-0">
@@ -111,7 +111,7 @@ const TravelAdvisoriesView: React.FC = () => {
               )}
           </div>
         </div>
-        <TravelAdvisoryFilter 
+        <TravelAdvisoryFilter
           searchTerm={searchTerm}
           onSearchChange={setSearchTerm}
           selectedLevel={selectedLevel}

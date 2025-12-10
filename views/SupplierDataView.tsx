@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { SupplierData } from '../modules/types';
-import { fetchSupplierData } from '../services/localSupplierService';
+import { SupplierData, CAGEStatus, USAState, CANProvince, Country } from '../modules/types';
+import { fetchSupplierData, fetchCAGEStatus, fetchUSAState, fetchCANProvince, fetchCountry } from '../services/localSupplierService';
 import { PAGE_SIZE } from '../constants';
 import SupplierDataCard from '../components/SupplierDataCard';
 import Pagination from '../components/Pagination';
@@ -25,11 +25,12 @@ const ErrorMessage: React.FC<{ message: string }> = ({ message }) => (
 interface SearchBarProps {
   searchTerm: string;
   onSearchChange: (term: string) => void;
+  className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange, className = '' }) => {
   return (
-    <div className="relative mb-6">
+    <div className={`relative ${className}`}>
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg className="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -37,7 +38,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
       </div>
       <input
         type="text"
-        placeholder="Search suppliers by name, number, CAGE code, CAGE Status, or Supplier address..."
+        placeholder="Search suppliers by name, number, UEI, CAGE code, status, or address..."
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
         className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 pl-10 pr-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -46,21 +47,40 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => 
   );
 };
 
+
 const SupplierDataView: React.FC = () => {
   const [data, setData] = useState<SupplierData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [cageStatuses, setCageStatuses] = useState<CAGEStatus[]>([]);
+  const [usaSP, setUsaSP] = useState<USAState[]>([]);
+  const [canSP, setCanSP] = useState<CANProvince[]>([]);
+  const [country, setCountry] = useState<Country[]>([]);
 
   // State for filters and sorting
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCageStatus, setSelectedCageStatus] = useState<string>('');
+  const [selectedUsaSP, setSelectedUsaSP] = useState<string>('');
+  const [selectedCanSP, setSelectedCanSP] = useState<string>('');
+  const [selectedCountry, setSelectedCountry] = useState<string>('');
 
   const handleFetch = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const supplierData = await fetchSupplierData();
+      const [supplierData, cageStatusData, usaSPData, canSPData, countryData] = await Promise.all([
+        fetchSupplierData(),
+        fetchCAGEStatus(),
+        fetchUSAState(),
+        fetchCANProvince(),
+        fetchCountry(),
+      ]);
       setData(supplierData);
+      setCageStatuses(cageStatusData);
+      setUsaSP(usaSPData);
+      setCanSP(canSPData);
+      setCountry(countryData);
     } catch (err) {
       console.error(err);
       setError('Failed to fetch data.');
@@ -75,7 +95,7 @@ const SupplierDataView: React.FC = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm]);
+  }, [searchTerm, selectedCageStatus, selectedUsaSP, selectedCanSP, selectedCountry]);
 
   const filteredAndSortedData = useMemo(() => {
     let result = [...data];
@@ -83,8 +103,7 @@ const SupplierDataView: React.FC = () => {
     // Filter by search term
     if (searchTerm) {
       const lowerTerm = searchTerm.toLowerCase();
-      result = result.filter(item => 
-          (item.SupplierName && item.SupplierName.toLowerCase().includes(lowerTerm))
+      result = result.filter(item => (item.SupplierName && item.SupplierName.toLowerCase().includes(lowerTerm))
        || (item.SupplierNumber && item.SupplierNumber.toLowerCase().includes(lowerTerm))
        || (item.CAGECode && item.CAGECode.toLowerCase().includes(lowerTerm))
        || (item.UEI && item.UEI.toLowerCase().includes(lowerTerm))
@@ -92,23 +111,37 @@ const SupplierDataView: React.FC = () => {
        || (item.City && item.City.toLowerCase().includes(lowerTerm))
        || (item.Territory && item.Territory.toLowerCase().includes(lowerTerm))
        || (item.USAState && (
-               item.USAState.Alpha2.toLowerCase().includes(lowerTerm)
-            || item.USAState.StateName.toLowerCase().includes(lowerTerm)
+          item.USAState.Alpha2.toLowerCase().includes(lowerTerm) || item.USAState.StateName.toLowerCase().includes(lowerTerm)
           ))
        || (item.CANProvince && (
-               item.CANProvince.Alpha2.toLowerCase().includes(lowerTerm)
-            || item.CANProvince.ProvinceName.toLowerCase().includes(lowerTerm)
+          item.CANProvince.Alpha2.toLowerCase().includes(lowerTerm) || item.CANProvince.ProvinceName.toLowerCase().includes(lowerTerm)
           ))
        || (item.Country && (
-               item.Country.Alpha3.toLowerCase().includes(lowerTerm)
-            || item.Country.CountryName.toLowerCase().includes(lowerTerm)
-          )) 
+          item.Country.Alpha3.toLowerCase().includes(lowerTerm) || item.Country.CountryName.toLowerCase().includes(lowerTerm)
+          ))
        || (item.CAGEStatus && ( item.CAGEStatus.Description.toLowerCase().includes(lowerTerm) ))
       );
     }
 
+    // Filter by CAGE Status
+    if (selectedCageStatus) {
+      result = result.filter(item => item.CAGEStatus?.Code === selectedCageStatus);
+    }
+
+    if (selectedUsaSP) {
+      result = result.filter(item => item.USAState?.Alpha2 === selectedUsaSP);
+    }
+
+    if (selectedCanSP) {
+      result = result.filter(item => item.CANProvince?.Alpha2 === selectedCanSP);
+    }
+
+    if (selectedCountry) {
+      result = result.filter(item => item.Country?.Alpha3 === selectedCountry);
+    }
+
     return result;
-  }, [data, searchTerm]);
+  }, [data, searchTerm, selectedCageStatus, selectedUsaSP, selectedCanSP, selectedCountry]);
 
   const totalPages = useMemo(() => Math.ceil(filteredAndSortedData.length / PAGE_SIZE), [filteredAndSortedData]);
 
@@ -118,10 +151,74 @@ const SupplierDataView: React.FC = () => {
   }, [currentPage, filteredAndSortedData]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-6">
-        <div className="w-full">
-           <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+    <div className="space-y-2">
+      <h2 className="px-4 py-4 text-2xl font-bold text-white">Supplier Info</h2>
+      <div className="px-4 rounded-lg shadow-sm sticky top-2 z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-4">
+          <div className="w-full">
+            <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+          </div>
+          {/* to use function later */}
+          <div className="w-full md:w-64 flex-shrink-0">
+              <select
+                  value={selectedCageStatus}
+                  onChange={(e) => setSelectedCageStatus(e.target.value)}
+                  className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+                  style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 0.5rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em` }}
+              >
+                  <option value="">All CAGE Statuses</option>
+                  {cageStatuses.map((status) => (
+                      <option key={status.Code} value={status.Code}>
+                          {status.Description} ({status.Code})
+                      </option>
+                  ))}
+              </select>
+          </div>
+          <div className="w-full md:w-64 flex-shrink-0">
+              <select
+                  value={selectedUsaSP}
+                  onChange={(e) => setSelectedUsaSP(e.target.value)}
+                  className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+                  style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 0.5rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em` }}
+              >
+                  <option value="">All USA States</option>
+                  {usaSP.map((status) => (
+                      <option key={status.Alpha2} value={status.Alpha2}>
+                          {status.StateName} ({status.Alpha2})
+                      </option>
+                  ))}
+              </select>
+          </div>
+          <div className="w-full md:w-64 flex-shrink-0">
+              <select
+                  value={selectedCanSP}
+                  onChange={(e) => setSelectedCanSP(e.target.value)}
+                  className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+                  style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 0.5rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em` }}
+              >
+                  <option value="">All Canada Provinces</option>
+                  {canSP.map((status) => (
+                      <option key={status.Alpha2} value={status.Alpha2}>
+                          {status.ProvinceName} ({status.Alpha2})
+                      </option>
+                  ))}
+              </select>
+          </div>
+          <div className="w-full md:w-64 flex-shrink-0">
+              <select
+                  value={selectedCountry}
+                  onChange={(e) => setSelectedCountry(e.target.value)}
+                  className="block w-full bg-gray-800 border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+                  style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: `right 0.5rem center`, backgroundRepeat: `no-repeat`, backgroundSize: `1.5em 1.5em` }}
+              >
+                  <option value="">All Countries</option>
+                  {country.map((status) => (
+                      <option key={status.Alpha3} value={status.Alpha3}>
+                          {status.CountryName} ({status.Alpha3})
+                      </option>
+                  ))}
+              </select>
+          </div>
         </div>
       </div>
 
@@ -150,7 +247,12 @@ const SupplierDataView: React.FC = () => {
               <div className="text-center py-12">
                 <p className="text-gray-400 text-xl">No suppliers found matching your criteria.</p>
                 <button 
-                  onClick={() => setSearchTerm('')}
+                  onClick={() => {
+                      setSearchTerm('');
+                      setSelectedCageStatus('');
+                      setSelectedUsaSP('');
+                      setSelectedCanSP('');
+                  }}
                   className="mt-4 text-blue-400 hover:text-blue-300 underline"
                 >
                   Clear search

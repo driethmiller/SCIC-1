@@ -1,5 +1,5 @@
 import React from 'react';
-import { TravelAdvisory } from '../modules/types';
+import { TravelAdvisory } from '../../modules/types';
 
 interface TravelAdvisoryCardProps {
   advisory: TravelAdvisory;

@@ -3,10 +3,11 @@ import { ViewType } from '../modules/types';
 import { DocumentTextIcon } from '../icons/DocumentTextIcon';
 import { ClipboardDocumentListIcon } from '../icons/ClipboardDocumentListIcon';
 import { GlobeAltIcon } from '../icons/GlobeAltIcon';
-import { HomeIcon } from '../icons/HomeIcon';
 import { ArrowDownTrayIcon } from '../icons/ArrowDownTrayIcon';
 import { ChevronDoubleLeftIcon } from '../icons/ChevronDoubleLeftIcon';
 import { IdentificationIcon } from '../icons/IdentificationIcon';
+import { TrophyIcon } from '../icons/TrophyIcon';
+import { Users, Globe2, Activity, MapPin, BarChart3, PieChart, History, List, Box } from 'lucide-react';
 
 interface SidebarProps {
   activeView: ViewType;
@@ -18,6 +19,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapsed, toggleCollapse }) => {
   const navItems = [
     { id: 'Suppliers', label: 'Suppliers', icon: <DocumentTextIcon className="w-6 h-6" /> },
+    { id: 'dashboard', label: 'Dashboard', icon: <BarChart3 className="w-6 h-6" /> },
     { id: 'SupplierData', label: 'Supplier Data', icon: <ClipboardDocumentListIcon className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
   ];

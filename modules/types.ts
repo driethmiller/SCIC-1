@@ -1,4 +1,4 @@
-export type ViewType = 'SupplierData' | 'TravelAdvisories' | 'Suppliers';
+export type ViewType = 'SupplierData' | 'TravelAdvisories' | 'Suppliers' | 'dashboard' | 'list';
 
 export interface CANProvince {
   Alpha2: string;
@@ -36,6 +36,8 @@ export interface RawSupplierData {
   CANProvince: string | null;
   Country: string;
   CAGEStatus: string;
+  CreatedBy: string;
+  DateCreated: Date;
 }
 
 export interface SupplierData {
@@ -54,6 +56,8 @@ export interface SupplierData {
   CANProvince: CANProvince | null;
   Country: Country | null;
   CAGEStatus: CAGEStatus | null;
+  CreatedBy: string;
+  DateCreated: Date;
 }
 
 export interface TravelAdvisory {
