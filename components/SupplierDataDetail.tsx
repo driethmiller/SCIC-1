@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SupplierData } from '../modules/types';
 import { ArrowLeft, MapPin, Building2, Globe, Hash, FileText } from 'lucide-react';
 
@@ -8,6 +8,22 @@ interface SupplierDataDetailProps {
 }
 
 const SupplierDataDetail: React.FC<SupplierDataDetailProps> = ({ supplier, onBack }) => {
+  const [logoError, setLogoError] = useState(false);
+
+  // Generate logo URL from website
+  const getLogoUrl = (): string | null => {
+    if (supplier.Website) {
+      // Extract domain from website URL
+      let domain = supplier.Website;
+      domain = domain.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+      // Use Logo.dev API for high-resolution company logos
+      return `https://img.logo.dev/${domain}?token=pk_WxTY5IU0SveBNwrcoPPOTg`;
+    }
+    return null;
+  };
+
+  const logoUrl = getLogoUrl();
+
   const fullAddress = [
     supplier.Street,
     supplier.City,
@@ -34,8 +50,17 @@ const SupplierDataDetail: React.FC<SupplierDataDetailProps> = ({ supplier, onBac
       <div className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden border border-gray-700">
         <div className="p-8">
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <div className="w-24 h-24 rounded-full bg-gray-700 flex items-center justify-center border-4 border-gray-600 shadow-md">
-              <Building2 className="w-12 h-12 text-blue-400" />
+            <div className="w-24 h-24 rounded-lg bg-gray-700 flex items-center justify-center border-4 border-gray-600 shadow-md overflow-hidden">
+              {logoUrl && !logoError ? (
+                <img
+                  src={logoUrl}
+                  alt={`${supplier.SupplierName} logo`}
+                  className="w-full h-full object-contain p-2"
+                  onError={() => setLogoError(true)}
+                />
+              ) : (
+                <Building2 className="w-12 h-12 text-blue-400" />
+              )}
             </div>
             <div className="flex-1">
               <h1 className="text-3xl font-extrabold text-white">{supplier.SupplierName || 'No Name Provided'}</h1>
