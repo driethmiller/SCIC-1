@@ -5,6 +5,7 @@ import { fetchSupplierData, fetchCAGEStatus, fetchUSAState, fetchCANProvince, fe
 import { PAGE_SIZE } from '../constants';
 import SupplierDataRow from '../components/SupplierDataRow';
 import Pagination from '../components/Pagination';
+import SupplierDataDetail from '../components/SupplierDataDetail';
 
 // Loading Spinner Component
 const LoadingSpinner: React.FC = () => (
@@ -56,6 +57,7 @@ const SupplierDataView: React.FC = () => {
   const [usaSP, setUsaSP] = useState<USAState[]>([]);
   const [canSP, setCanSP] = useState<CANProvince[]>([]);
   const [country, setCountry] = useState<Country[]>([]);
+  const [selectedSupplier, setSelectedSupplier] = useState<SupplierData | null>(null);
 
   // State for filters and sorting
   const [searchTerm, setSearchTerm] = useState('');
@@ -206,6 +208,16 @@ const SupplierDataView: React.FC = () => {
 
   {/* Make a 'listedData function here, to show the same data in list form. */}
 
+  // If a supplier is selected, show the detail view
+  if (selectedSupplier) {
+    return (
+      <SupplierDataDetail 
+        supplier={selectedSupplier} 
+        onBack={() => setSelectedSupplier(null)} 
+      />
+    );
+  }
+
   return (
     <div className="space-y-2">
       <div className="px-4 rounded-lg shadow-sm sticky top-2 z-10">
@@ -323,7 +335,11 @@ const SupplierDataView: React.FC = () => {
             </div>
 
             {paginatedData.map((supplier, index) => (
-                <SupplierDataRow key={`${supplier.SupplierNumber}-${index}`} supplier={supplier} />
+                <SupplierDataRow 
+                  key={`${supplier.SupplierNumber}-${index}`} 
+                  supplier={supplier} 
+                  onSelect={(supplier) => setSelectedSupplier(supplier)}
+                />
             ))}
            
 

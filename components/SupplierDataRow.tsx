@@ -31,6 +31,7 @@ const StatusInfo: React.FC<CAGEStatusProps> = ( cageStatus ) => {
 
 interface SupplierRowProps {
   supplier: SupplierData;
+  onSelect?: (supplier: SupplierData) => void;
 }
 
 const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string | null | undefined }> = ({ icon, label, value }) => {
@@ -44,7 +45,7 @@ const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string
     );
 };
 
-const SupplierDataRow: React.FC<SupplierRowProps> = ({ supplier }) => {
+const SupplierDataRow: React.FC<SupplierRowProps> = ({ supplier, onSelect }) => {
   const fullAddress = [
     supplier.Street,
     supplier.City,
@@ -64,7 +65,12 @@ const SupplierDataRow: React.FC<SupplierRowProps> = ({ supplier }) => {
             <tbody>
                 <tr>
                       <td className="SupplierList" align="left" valign="middle" >
-                        <h4 className="text-lg font-bold text-blue-300 break-words">{supplier.SupplierName || 'No Name Provided'}</h4>
+                        <h4 
+                          className={`text-lg font-bold text-blue-300 break-words ${onSelect ? 'cursor-pointer hover:text-blue-400 hover:underline' : ''}`}
+                          onClick={() => onSelect && onSelect(supplier)}
+                        >
+                          {supplier.SupplierName || 'No Name Provided'}
+                        </h4>
                     </td>
                       <td width="10%" align="center" valign="middle" className="text-gray-200 break-words">
                         {supplier.SupplierNumber}

@@ -30,6 +30,7 @@ const StatusInfo: React.FC<CAGEStatusProps> = ( cageStatus ) => {
 
 interface SupplierCardProps {
   supplier: SupplierData;
+  onSelect?: (supplier: SupplierData) => void;
 }
 
 const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string | null | undefined }> = ({ icon, label, value }) => {
@@ -43,7 +44,7 @@ const InfoRow: React.FC<{ icon: React.ReactElement, label: string; value: string
     );
 };
 
-const SupplierDataCard: React.FC<SupplierCardProps> = ({ supplier }) => {
+const SupplierDataCard: React.FC<SupplierCardProps> = ({ supplier, onSelect }) => {
   const fullAddress = [
     supplier.Street,
     supplier.City,
@@ -60,7 +61,12 @@ const SupplierDataCard: React.FC<SupplierCardProps> = ({ supplier }) => {
     <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-blue-500/50 hover:scale-[1.02] flex flex-col">
       <div className="p-5 flex-grow flex flex-col">
         <div className="mb-4">
-          <h3 className="text-lg font-bold text-blue-300 break-words">{supplier.SupplierName || 'No Name Provided'}</h3>
+          <h3 
+            className={`text-lg font-bold text-blue-300 break-words ${onSelect ? 'cursor-pointer hover:text-blue-400 hover:underline' : ''}`}
+            onClick={() => onSelect && onSelect(supplier)}
+          >
+            {supplier.SupplierName || 'No Name Provided'}
+          </h3>
           <p className="text-xs text-gray-400">
             {supplier.SupplierNumber} || {supplier.UEI} || {supplier.CAGECode}&nbsp;&nbsp;
             <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${

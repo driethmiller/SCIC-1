@@ -5,6 +5,7 @@ import { fetchSupplierData, fetchCAGEStatus, fetchUSAState, fetchCANProvince, fe
 import { PAGE_SIZE } from '../constants';
 import SupplierDataCard from '../components/SupplierDataCard';
 import Pagination from '../components/Pagination';
+import SupplierDataDetail from '../components/SupplierDataDetail';
 
 // Loading Spinner Component
 const LoadingSpinner: React.FC = () => (
@@ -56,6 +57,7 @@ const SupplierDataView: React.FC = () => {
   const [usaSP, setUsaSP] = useState<USAState[]>([]);
   const [canSP, setCanSP] = useState<CANProvince[]>([]);
   const [country, setCountry] = useState<Country[]>([]);
+  const [selectedSupplier, setSelectedSupplier] = useState<SupplierData | null>(null);
 
   // State for filters and sorting
   const [searchTerm, setSearchTerm] = useState('');
@@ -160,6 +162,16 @@ const SupplierDataView: React.FC = () => {
     return filteredAndSortedData.slice(startIndex, startIndex + PAGE_SIZE);
   }, [currentPage, filteredAndSortedData]);
 
+  // If a supplier is selected, show the detail view
+  if (selectedSupplier) {
+    return (
+      <SupplierDataDetail 
+        supplier={selectedSupplier} 
+        onBack={() => setSelectedSupplier(null)} 
+      />
+    );
+  }
+
   return (
     <div className="space-y-2">
       <div className="px-4 rounded-lg shadow-sm sticky top-2 z-10">
@@ -251,7 +263,11 @@ const SupplierDataView: React.FC = () => {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {paginatedData.map((supplier, index) => (
-                  <SupplierDataCard key={`${supplier.SupplierNumber}-${index}`} supplier={supplier} />
+                  <SupplierDataCard 
+                    key={`${supplier.SupplierNumber}-${index}`} 
+                    supplier={supplier} 
+                    onSelect={(supplier) => setSelectedSupplier(supplier)}
+                  />
                 ))}
               </div>
                <Pagination
