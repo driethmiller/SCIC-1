@@ -163,13 +163,13 @@ const [supplierData, setSupplierData] = useState<RawSupplierData[]>([]);
           <h1 className="text-3xl font-bold text-white">
             {currentView === 'dashboard' ?
                 <div>
-                    <h2 className="text-2xl font-bold text-white">Supplier Dashboard Overview</h2>
+                    <span className="text-2xl font-bold text-white">Supplier Dashboard Overview</span>
                     <p className="text-slate-500 mt-1 SubText">Real-time insights into the supplier base.</p>
                 </div>
             : ''}
             {currentView === 'list' ?
-                <h2 className="text-2xl font-bold text-white">All Suppliers: List View</h2> : ''}
-            {currentView === 'tile' ? <h2 className="text-2xl font-bold text-white">All Suppliers: Tile View</h2> : ''}
+                <span className="text-2xl font-bold text-white">All Suppliers: List View</span> : ''}
+            {currentView === 'tile' ? <span className="text-2xl font-bold text-white">All Suppliers: Tile View</span> : ''}
           </h1>
           <div className="flex items-center space-x-4">
               <ViewToggle currentView={currentView} onViewChange={setCurrentView} />

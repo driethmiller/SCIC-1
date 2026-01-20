@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EditIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="109.998px" height="92px" viewBox="0 0 109.998 92" enable-background="new 0 0 109.998 92" xml:space="preserve">
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="109.998px" height="92px" viewBox="0 0 109.998 92" enableBackground="new 0 0 109.998 92" xmlSpace="preserve">
 <g id="Layer_2">
 	<g>
 		<g>
