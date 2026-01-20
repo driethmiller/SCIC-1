@@ -1,6 +1,6 @@
 import React from 'react';
 import { Supplier } from '../modules/types';
-import PieChart from '../charts/PieChart';
+import PieChart from './PieChart';
 
 interface DashboardProps {
   suppliers: Supplier[];

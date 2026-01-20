@@ -8,6 +8,7 @@ import { ChevronDoubleLeftIcon } from '../icons/ChevronDoubleLeftIcon';
 import { IdentificationIcon } from '../icons/IdentificationIcon';
 import { TrophyIcon } from '../icons/TrophyIcon';
 import { Users, Globe2, Activity, MapPin, BarChart3, PieChart, History, List, Box } from 'lucide-react';
+import Meatball from '../icons/Meatball';
 
 interface SidebarProps {
   activeView: ViewType;
@@ -19,17 +20,13 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapsed, toggleCollapse }) => {
   const navItems = [
     { id: 'Suppliers', label: 'Suppliers', icon: <DocumentTextIcon className="w-6 h-6" /> },
-    { id: 'dashboard', label: 'Dashboard', icon: <BarChart3 className="w-6 h-6" /> },
-    { id: 'SupplierData', label: 'Supplier Data', icon: <ClipboardDocumentListIcon className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
   ];
 
   return (
     <nav className={`bg-slate-800 text-white flex flex-col transition-all duration-300 ease-in-out ${isCollapsed ? 'w-20' : 'w-64'}`}>
       <div className="p-4 border-b border-slate-700 flex items-center space-x-3 overflow-hidden">
-         <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center font-bold text-xl flex-shrink-0">
-            S
-         </div>
+          <Meatball />
         {!isCollapsed && <h2 className="text-lg font-bold whitespace-nowrap">SCIC Data Hub</h2>}
       </div>
       <ul className="flex-1 p-2">

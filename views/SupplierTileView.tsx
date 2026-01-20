@@ -97,6 +97,16 @@ const SupplierDataView: React.FC = () => {
     setCurrentPage(1);
   }, [searchTerm, selectedCageStatus, selectedUsaSP, selectedCanSP, selectedCountry]);
 
+  const clearAllFilters = () => {
+    setSearchTerm('');
+    setSelectedCageStatus('');
+    setSelectedUsaSP('');
+    setSelectedCanSP('');
+    setSelectedCountry('');
+  };
+
+  const hasActiveFilters = searchTerm || selectedCageStatus || selectedUsaSP || selectedCanSP || selectedCountry;
+
   const filteredAndSortedData = useMemo(() => {
     let result = [...data];
 
@@ -152,7 +162,6 @@ const SupplierDataView: React.FC = () => {
 
   return (
     <div className="space-y-2">
-      <h2 className="px-4 py-4 text-2xl font-bold text-white">Supplier Info</h2>
       <div className="px-4 rounded-lg shadow-sm sticky top-2 z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-4">
           <div className="w-full">
@@ -219,6 +228,16 @@ const SupplierDataView: React.FC = () => {
                   ))}
               </select>
           </div>
+          {hasActiveFilters && (
+            <div className="w-full md:w-auto flex-shrink-0">
+              <button
+                onClick={clearAllFilters}
+                className="block w-full md:w-auto bg-blue-600 hover:bg-blue-700 border border-blue-500 rounded-md py-3 px-4 text-white font-medium focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-colors"
+              >
+                Clear All Filters
+              </button>
+            </div>
+          )}
         </div>
       </div>
 

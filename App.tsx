@@ -3,12 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { ViewType, UserRole } from './modules/types';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
+import SearchBar from './components/SearchBar';
+import SupplierList from './components/SupplierList';
+import SupplierDetail from './components/SupplierDetail';
+import ContractDetail from './components/ContractDetail';
+import AddSupplierModal from './components/AddSupplierModal';
+import Dashboard from './components/Dashboard';
+import ViewToggle from './components/ViewToggle';
 
-import SupplierDataView from './views/SupplierDataView';
 import TravelAdvisoryView from './apps/TravelAdvisory/TravelAdvisoryView';
-import SupplierBView from './views/SupplierBView';
-import { RawSupplierData } from '../modules/types';
-import Dashboard from './components/Dashboardcy';
+import SupplierMain from './views/SupplierMain';
+import { RawSupplierData } from './modules/types';
 import { fetchRawSupplierData } from './services/localSupplierService';
 import { Menu, Loader2 } from 'lucide-react';
 
@@ -71,12 +76,10 @@ const App: React.FC = () => {
 
   const renderView = () => {
     switch (activeView) {
-      case 'SupplierData':
-        return <SupplierDataView />;
       case 'TravelAdvisories':
         return <TravelAdvisoryView />;
       case 'Suppliers':
-        return <SupplierBView currentUserRole={currentRole} />;
+        return <SupplierMain currentUserRole={currentRole} />;
       case 'dashboard':
         return <Dashboard data={supplierData}/>
     }

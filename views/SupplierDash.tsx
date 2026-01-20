@@ -14,9 +14,10 @@ export default function Dashboard({ data }: DashboardProps) {
     const total = data.length;
     const active = data.filter(s => s.CAGEStatus === 'A' || s.CAGEStatus === 'W' || s.CAGEStatus === 'Y').length;
     const uniqueCountries = new Set(data.map(s => s.Country).filter(Boolean)).size;
-    const usSuppliers = data.filter(s => s.Country === 'USA').length;
+      const usSuppliers = data.filter(s => s.Country === 'USA').length;
+      const foreignSuppliers = data.filter(s => s.Country !== 'USA').length;
     
-    return { total, active, uniqueCountries, usSuppliers };
+    return { total, active, uniqueCountries, usSuppliers, foreignSuppliers };
   }, [data]);
 
   const geoData = useMemo(() => getGeoDistribution(data), [data]);
@@ -30,15 +31,10 @@ export default function Dashboard({ data }: DashboardProps) {
 
   return (
     <div className="space-y-6">
-      <div className="p-6 rounded-lg shadow-sm">
-        <div>
-          <h2 className="text-2xl font-bold text-white">Dashboard Overview</h2>
-          <p className="text-slate-500 mt-1">Real-time insights into your supplier base.</p>
-        </div>
-      </div>
+
 
       {/* Top Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         <StatsCard 
           title="Total Suppliers" 
           value={stats.total} 
@@ -53,10 +49,16 @@ export default function Dashboard({ data }: DashboardProps) {
           color="bg-green-500" 
         />
         <StatsCard 
-          title="US Suppliers" 
+          title="Domestic (US) Suppliers" 
           value={stats.usSuppliers} 
           icon={MapPin} 
           color="bg-indigo-500" 
+              />
+        <StatsCard
+            title="Foreign Suppliers"
+            value={stats.foreignSuppliers}
+            icon={MapPin}
+            color="bg-indigo-500"
         />
         <StatsCard 
           title="Global Reach" 
@@ -67,16 +69,16 @@ export default function Dashboard({ data }: DashboardProps) {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Geo Distribution Chart */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm lg:col-span-2">
-          <h3 className="text-lg font-semibold text-slate-800 mb-4">Top 7 Supplier Locations (USA)</h3>
+        <div className="DashBox p-6 rounded-xl border border-slate-200 shadow-sm lg:col-span-2">
+          <h3 className="text-lg font-semibold text-slate-900 mb-4">Top 7 Supplier Locations (USA)</h3>
           <div className="space-y-4">
             {geoData.length > 0 ? geoData.map((item) => (
               <div key={item.state} className="relative">
                 <div className="flex justify-between text-sm mb-1">
-                  <span className="font-medium text-slate-700">{item.state}</span>
-                  <span className="text-slate-500">{item.count} suppliers</span>
+                  <span className="font-medium text-slate-900">{item.state}</span>
+                  <span className="text-slate-900">{item.count} suppliers</span>
                 </div>
                 <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
                   <div 
@@ -90,8 +92,8 @@ export default function Dashboard({ data }: DashboardProps) {
         </div>
 
         {/* Status Distribution Chart */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-          <h3 className="text-lg font-semibold text-slate-800 mb-6">CAGE Status Distribution</h3>
+              <div className="DashBox p-6 rounded-xl border border-slate-200 shadow-sm lg:col-span-2">
+          <h3 className="text-lg font-semibold text-slate-900 mb-6">CAGE Status Distribution</h3>
           <div className="flex flex-col items-center">
             <div className="relative h-48 w-48">
               {/* Simple CSS/SVG Donut Chart representation */}
@@ -113,14 +115,14 @@ export default function Dashboard({ data }: DashboardProps) {
               </svg>
               <div className="absolute inset-0 flex items-center justify-center flex-col">
                 <span className="text-3xl font-bold text-slate-800">{stats.total}</span>
-                <span className="text-xs text-slate-500 uppercase tracking-wide">Total</span>
+                <span className="text-xs text-slate-900 uppercase tracking-wide">Total</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-6 w-full px-2">
               {statusData.segments.map((segment) => (
                 <div key={segment.status} className="flex items-center text-sm">
                   <span className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: segment.color }} />
-                  <span className="text-slate-600 flex-1">{segment.label}</span>
+                  <span className="text-slate-900 flex-1">{segment.label}</span>
                   <span className="font-medium text-slate-900">{Math.round(segment.percentage * 100) / 100}%</span>
                 </div>
               ))}
@@ -130,7 +132,7 @@ export default function Dashboard({ data }: DashboardProps) {
       </div>
 
       {/* Recent Activity */}
-      <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="DashBox rounded-xl border border-slate-200 shadow-sm overflow-hidden">
         <div className="px-6 py-4 border-b border-slate-100">
           <h3 className="text-lg font-semibold text-slate-800">Recently Added Suppliers</h3>
         </div>
@@ -144,7 +146,7 @@ export default function Dashboard({ data }: DashboardProps) {
                   </div>
                   <div className="ml-4 truncate">
                     <p className="text-sm font-medium text-slate-900 truncate">{supplier.SupplierName}</p>
-                    <p className="text-sm text-slate-500 truncate">{supplier.City}, {supplier.USAState || supplier.Country}</p>
+                    <p className="text-sm text-slate-900 truncate">{supplier.City}, {supplier.USAState || supplier.Country}</p>
                   </div>
                 </div>
                 <div className="text-right pl-4">
@@ -152,7 +154,7 @@ export default function Dashboard({ data }: DashboardProps) {
                     ${supplier.CAGEStatus === 'A' ? 'bg-green-100 text-green-800' : 'bg-slate-100 text-slate-800'}`}>
                     Status: {supplier.CAGEStatus}
                   </span>
-                  <p className="text-xs text-slate-400 mt-1">{new Date(supplier.DateCreated).toLocaleDateString()}</p>
+                  <p className="text-xs text-slate-900 mt-1">{new Date(supplier.DateCreated).toLocaleDateString()}</p>
                 </div>
               </div>
             </div>
@@ -165,14 +167,14 @@ export default function Dashboard({ data }: DashboardProps) {
 
 function StatsCard({ title, value, subValue, label, icon: Icon, color }: any) {
   return (
-    <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between">
+    <div className="DashBox p-6 rounded-xl border border-slate-200 shadow-sm flex items-start justify-between">
       <div>
-        <p className="text-sm font-medium text-slate-500">{title}</p>
+        <p className="text-sm font-medium text-slate-900">{title}</p>
         <div className="mt-2 flex items-baseline">
           <p className="text-3xl font-bold text-slate-900">{value}</p>
-          {label && <span className="ml-2 text-sm text-slate-500">{label}</span>}
+          {label && <span className="ml-2 text-sm text-slate-590">{label}</span>}
         </div>
-        {subValue && <p className="mt-1 text-sm text-slate-400">{subValue}</p>}
+        {subValue && <p className="mt-1 text-sm text-slate-900">{subValue}</p>}
       </div>
       <div className={`p-3 rounded-lg ${color} bg-opacity-10 text-${color.replace('bg-', '')}`}>
         <Icon size={24} className={`text-${color.replace('bg-', '')}-600`} style={{ opacity: 0.8 }} />

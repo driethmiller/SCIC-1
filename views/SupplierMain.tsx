@@ -2,19 +2,28 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Supplier, Contract, UserRole } from '../modules/types';
 import { getSuppliers, getContracts, removeSupplier, addSupplier, updateSupplier } from '../services/supplierService';
 
-import SearchBar from '../components/SearchBar';
-import SupplierList from '../components/SupplierList';
+
+/*import SearchBar from '../components/SearchBar';*/
+import SupplierList from '../views/SupplierListView';
+import SupplierTile from '../views/SupplierTileView';
+import SupplierDash from '../views/SupplierDash';
 import SupplierDetail from '../components/SupplierDetail';
 import ContractDetail from '../components/ContractDetail';
 import AddSupplierModal from '../components/AddSupplierModal';
-import Dashboard from '../components/Dashboard';
+/*import Dashboard from '../components/Dashboard';*/
 import ViewToggle from '../components/ViewToggle';
 
-type View = 'dashboard' | 'list';
+import { RawSupplierData } from '../modules/types';
+import { fetchRawSupplierData } from '../services/localSupplierService';
+
+
+type View = 'dashboard' | 'list' | 'tile';
 
 interface SupplierBViewProps {
   currentUserRole: UserRole;
 }
+
+
 
 const SupplierBView: React.FC<SupplierBViewProps> = ({ currentUserRole }) => {
   const [suppliers, setSuppliers] = useState<Supplier[]>([]);
@@ -26,7 +35,7 @@ const SupplierBView: React.FC<SupplierBViewProps> = ({ currentUserRole }) => {
   const [selectedContract, setSelectedContract] = useState<Contract | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [supplierToEdit, setSupplierToEdit] = useState<Supplier | null>(null);
-  const [currentView, setCurrentView] = useState<View>('dashboard');
+  const [currentView, setCurrentView] = useState<View>('list');
 
   const fetchData = useCallback(async () => {
     setIsLoading(true);
@@ -34,7 +43,9 @@ const SupplierBView: React.FC<SupplierBViewProps> = ({ currentUserRole }) => {
     try {
       const [suppliersData, contractsData] = await Promise.all([getSuppliers(), getContracts()]);
       setSuppliers(suppliersData);
-      setContracts(contractsData);
+        setContracts(contractsData);
+        const data = await fetchRawSupplierData();
+        setSupplierData(data);
     } catch (err) {
       setError('Failed to fetch data. Please try again later.');
     } finally {
@@ -121,6 +132,10 @@ const SupplierBView: React.FC<SupplierBViewProps> = ({ currentUserRole }) => {
     );
   }, [suppliers, searchTerm]);
 
+// Dashboard
+const [supplierData, setSupplierData] = useState<RawSupplierData[]>([]);
+
+
   const renderContent = () => {
     if (selectedContract && selectedSupplier) {
       return (
@@ -150,7 +165,15 @@ const SupplierBView: React.FC<SupplierBViewProps> = ({ currentUserRole }) => {
       <>
         <div className="flex justify-between items-center mb-6 flex-wrap gap-4">
           <h1 className="text-3xl font-bold text-white">
-            {currentView === 'dashboard' ? 'Supplier Overview' : 'All Suppliers'}
+            {currentView === 'dashboard' ?
+                <div>
+                    <h2 className="text-2xl font-bold text-white">Supplier Dashboard Overview</h2>
+                    <p className="text-slate-500 mt-1 SubText">Real-time insights into the supplier base.</p>
+                </div>
+            : ''}
+            {currentView === 'list' ?
+                <h2 className="text-2xl font-bold text-white">All Suppliers: List View</h2> : ''}
+            {currentView === 'tile' ? <h2 className="text-2xl font-bold text-white">All Suppliers: Tile View</h2> : ''}
           </h1>
           <div className="flex items-center space-x-4">
               <ViewToggle currentView={currentView} onViewChange={setCurrentView} />
@@ -164,21 +187,19 @@ const SupplierBView: React.FC<SupplierBViewProps> = ({ currentUserRole }) => {
               )}
           </div>
         </div>
-        {currentView === 'dashboard' ? (
-          <Dashboard suppliers={suppliers} />
-        ) : (
-          <>
-            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            <SupplierList
-              suppliers={filteredSuppliers}
-              isLoading={isLoading}
-              error={error}
-              onRemove={handleRemoveSupplier}
-              onSelect={handleSelectSupplier}
-              currentUserRole={currentUserRole}
-            />
-          </>
-        )}
+            {currentView === 'dashboard' ?
+                   <SupplierDash data={supplierData} />  : ''}
+            {currentView === 'list' ?             
+                <SupplierList
+                  suppliers={filteredSuppliers}
+                  isLoading={isLoading}
+                  error={error}
+                  onRemove={handleRemoveSupplier}
+                  onSelect={handleSelectSupplier}
+                  currentUserRole={currentUserRole}
+                /> : ''
+            }
+            {currentView === 'tile' ? <SupplierTile /> : ''}
       </>
     );
   };
