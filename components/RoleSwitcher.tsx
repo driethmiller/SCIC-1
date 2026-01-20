@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { UserRole } from '../modules/types';
-import UserIcon from '../icons/UserIcon';
-import ChevronDownIcon from '../icons/ChevronDownIcon';
+import {ChevronDown, User} from 'lucide-react';
 
 interface RoleSwitcherProps {
   currentRole: UserRole;
@@ -35,9 +34,9 @@ const RoleSwitcher: React.FC<RoleSwitcherProps> = ({ currentRole, onRoleChange }
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 bg-gray-800/70 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white hover:bg-gray-700/70 transition-colors"
       >
-        <UserIcon className="w-5 h-5 text-blue-400" />
+        <User className="w-5 h-5 text-blue-400" />
         <span className="font-medium">{currentRole}</span>
-        <ChevronDownIcon className={`w-4 h-4 text-gray-400 transition-transform ${isOpen ? 'transform rotate-180' : ''}`} />
+        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${isOpen ? 'transform rotate-180' : ''}`} />
       </button>
 
       {isOpen && (

@@ -1,12 +1,6 @@
 import React from 'react';
 import { Supplier, Contract, UserRole } from '../modules/types';
-import ArrowLeftIcon from '../icons/ArrowLeftIcon';
-import LocationIcon from '../icons/LocationIcon';
-import CategoryIcon from '../icons/CategoryIcon';
-import IdentifierIcon from '../icons/IdentifierIcon';
-import ContractIcon from '../icons/ContractIcon';
-import HierarchyIcon from '../icons/HierarchyIcon';
-import EditIcon from '../icons/EditIcon';
+import {ArrowLeft,MapPin,Shapes,FingerprintPattern,Scroll,Pencil,ChartNoAxesGantt} from 'lucide-react';
 
 interface SupplierDetailProps {
   supplier: Supplier;
@@ -34,7 +28,7 @@ const SupplierDetail: React.FC<SupplierDetailProps> = ({ supplier, allSuppliers,
                 onClick={onBack}
                 className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 font-semibold"
             >
-                <ArrowLeftIcon className="w-5 h-5" />
+                <ArrowLeft className="w-5 h-5" />
                 <span>Back to Main List</span>
             </button>
             {currentUserRole === 'SCIC Contributor' && (
@@ -42,7 +36,7 @@ const SupplierDetail: React.FC<SupplierDetailProps> = ({ supplier, allSuppliers,
                     onClick={() => onEdit(supplier)}
                     className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-500 transition-colors font-semibold"
                 >
-                    <EditIcon className="w-5 h-5" />
+                    <Pencil className="w-5 h-5" />
                     <span>Edit Supplier</span>
                 </button>
             )}
@@ -59,15 +53,15 @@ const SupplierDetail: React.FC<SupplierDetailProps> = ({ supplier, allSuppliers,
                 </div>
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
                     <div className="flex items-start bg-gray-700/50 p-3 rounded-lg lg:col-span-1">
-                        <CategoryIcon className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
+                        <Shapes className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
                         <span className="text-gray-300">{supplier.category}</span>
                     </div>
                     <div className="flex items-start bg-gray-700/50 p-3 rounded-lg lg:col-span-2">
-                        <IdentifierIcon className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
+                        <FingerprintPattern className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
                         <span className="font-mono text-gray-300">CAGE: {supplier.cageCode} | UEID: {supplier.ueid}</span>
                     </div>
                      <div className="flex items-start bg-gray-700/50 p-3 rounded-lg md:col-span-2 lg:col-span-3">
-                        <LocationIcon className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
+                        <MapPin className="w-5 h-5 mr-3 text-blue-400 flex-shrink-0 mt-1" />
                         <span className="text-gray-300">{supplier.fullAddress}</span>
                     </div>
                 </div>
@@ -75,7 +69,7 @@ const SupplierDetail: React.FC<SupplierDetailProps> = ({ supplier, allSuppliers,
 
             <div className="border-t border-gray-700 p-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <HierarchyIcon className="w-6 h-6 mr-3 text-green-400" />
+                    <ChartNoAxesGantt className="w-6 h-6 mr-3 text-green-400" />
                     Corporate Structure
                 </h3>
                 <div className="space-y-4">
@@ -116,7 +110,7 @@ const SupplierDetail: React.FC<SupplierDetailProps> = ({ supplier, allSuppliers,
             
             <div className="border-t border-gray-700 p-8">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <ContractIcon className="w-6 h-6 mr-3 text-purple-400" />
+                    <Scroll className="w-6 h-6 mr-3 text-purple-400" />
                     Associated Contracts ({associatedContracts.length})
                 </h3>
                 {associatedContracts.length > 0 ? (
@@ -130,7 +124,7 @@ const SupplierDetail: React.FC<SupplierDetailProps> = ({ supplier, allSuppliers,
                                 tabIndex={0}
                                 onKeyPress={(e) => e.key === 'Enter' && onSelectContract(contract)}
                             >
-                                <ContractIcon className="w-6 h-6 text-purple-400 flex-shrink-0" />
+                                <Scroll className="w-6 h-6 text-purple-400 flex-shrink-0" />
                                 <div>
                                     <p className="font-semibold text-white">{contract.name}</p>
                                     <p className="text-sm text-gray-400 font-mono">{contract.contractNumber}</p>

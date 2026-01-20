@@ -1,13 +1,6 @@
 import React from 'react';
 import { ViewType } from '../modules/types';
-import { DocumentTextIcon } from '../icons/DocumentTextIcon';
-import { ClipboardDocumentListIcon } from '../icons/ClipboardDocumentListIcon';
-import { GlobeAltIcon } from '../icons/GlobeAltIcon';
-import { ArrowDownTrayIcon } from '../icons/ArrowDownTrayIcon';
-import { ChevronDoubleLeftIcon } from '../icons/ChevronDoubleLeftIcon';
-import { IdentificationIcon } from '../icons/IdentificationIcon';
-import { TrophyIcon } from '../icons/TrophyIcon';
-import { Users, Globe2, Activity, MapPin, BarChart3, PieChart, History, List, Box } from 'lucide-react';
+import { Users, Globe, Building2, ChevronsLeft, Activity, MapPin, BarChart3, PieChart, History, List, Box } from 'lucide-react';
 import Meatball from '../icons/Meatball';
 
 interface SidebarProps {
@@ -19,8 +12,8 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapsed, toggleCollapse }) => {
   const navItems = [
-    { id: 'Suppliers', label: 'Suppliers', icon: <DocumentTextIcon className="w-6 h-6" /> },
-    { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <GlobeAltIcon className="w-6 h-6" /> },
+    { id: 'Suppliers', label: 'Suppliers', icon: <Building2 className="w-6 h-6" /> },
+    { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <Globe className="w-6 h-6" /> },
   ];
 
   return (
@@ -55,7 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapse
               className="w-full flex items-center justify-center p-3 rounded-md text-slate-400 hover:bg-slate-700 hover:text-white transition-colors duration-200"
               aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
-              <ChevronDoubleLeftIcon className={`w-6 h-6 transition-transform duration-300 ${isCollapsed ? 'rotate-180' : ''}`} />
+              <ChevronsLeft className={`w-6 h-6 transition-transform duration-300 ${isCollapsed ? 'rotate-180' : ''}`} />
           </button>
       </div>
       <div className={`p-4 border-t border-slate-700 text-xs text-slate-400 ${isCollapsed ? 'text-center' : ''} overflow-hidden`}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchIcon from '../icons/SearchIcon';
+import {Search} from 'lucide-react';
 
 interface SearchBarProps {
   searchTerm: string;
@@ -11,7 +11,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
     <div className="mb-12">
       <div className="relative max-w-lg mx-auto">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-          <SearchIcon className="h-5 w-5 text-gray-500" />
+          <Search className="h-5 w-5 text-gray-500" />
         </div>
         <input
           type="text"

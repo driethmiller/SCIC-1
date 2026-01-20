@@ -2,20 +2,16 @@ import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Supplier, Contract, UserRole } from '../modules/types';
 import { getSuppliers, getContracts, removeSupplier, addSupplier, updateSupplier } from '../services/supplierService';
 
-
-/*import SearchBar from '../components/SearchBar';*/
 import SupplierList from '../views/SupplierListView';
 import SupplierTile from '../views/SupplierTileView';
 import SupplierDash from '../views/SupplierDash';
 import SupplierDetail from '../components/SupplierDetail';
 import ContractDetail from '../components/ContractDetail';
 import AddSupplierModal from '../components/AddSupplierModal';
-/*import Dashboard from '../components/Dashboard';*/
 import ViewToggle from '../components/ViewToggle';
 
 import { RawSupplierData } from '../modules/types';
 import { fetchRawSupplierData } from '../services/localSupplierService';
-
 
 type View = 'dashboard' | 'list' | 'tile';
 

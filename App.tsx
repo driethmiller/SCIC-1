@@ -3,26 +3,18 @@ import React, { useState, useEffect } from 'react';
 import { ViewType, UserRole } from './modules/types';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import SearchBar from './components/SearchBar';
-import SupplierList from './components/SupplierList';
-import SupplierDetail from './components/SupplierDetail';
-import ContractDetail from './components/ContractDetail';
-import AddSupplierModal from './components/AddSupplierModal';
-import Dashboard from './components/Dashboard';
-import ViewToggle from './components/ViewToggle';
 
 import TravelAdvisoryView from './apps/TravelAdvisory/TravelAdvisoryView';
 import SupplierMain from './views/SupplierMain';
 import { RawSupplierData } from './modules/types';
 import { fetchRawSupplierData } from './services/localSupplierService';
-import { Menu, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<ViewType>('Suppliers');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(window.innerWidth < 1024);
   const [currentRole, setCurrentRole] = useState<UserRole>('SCIC Contributor');
 
-  // Dashboard
   const [supplierData, setSupplierData] = useState<RawSupplierData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -80,8 +72,6 @@ const App: React.FC = () => {
         return <TravelAdvisoryView />;
       case 'Suppliers':
         return <SupplierMain currentUserRole={currentRole} />;
-      case 'dashboard':
-        return <Dashboard data={supplierData}/>
     }
   };
 

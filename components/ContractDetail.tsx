@@ -1,7 +1,6 @@
 import React from 'react';
 import { Contract, Supplier } from '../modules/types';
-import ArrowLeftIcon from '../icons/ArrowLeftIcon';
-import ContractIcon from '../icons/ContractIcon';
+import {ArrowLeft, Scroll} from 'lucide-react';
 
 interface ContractDetailProps {
   contract: Contract;
@@ -22,7 +21,7 @@ const ContractDetail: React.FC<ContractDetailProps> = ({ contract, suppliers, on
                 onClick={onBack}
                 className="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 font-semibold"
             >
-                <ArrowLeftIcon className="w-5 h-5" />
+                <ArrowLeft className="w-5 h-5" />
                 <span>Back to Supplier Details</span>
             </button>
         </div>
@@ -30,7 +29,7 @@ const ContractDetail: React.FC<ContractDetailProps> = ({ contract, suppliers, on
         <div className="bg-gray-800/50 backdrop-blur-md rounded-lg shadow-lg overflow-hidden border border-gray-700 p-8 max-w-4xl mx-auto">
             <div className="mb-6">
                 <div className="flex items-center mb-2">
-                    <ContractIcon className="w-8 h-8 mr-3 text-purple-400" />
+                    <Scroll className="w-8 h-8 mr-3 text-purple-400" />
                     <div>
                         <h1 className="text-3xl font-extrabold text-white">{contract.name}</h1>
                         <p className="text-gray-400 font-mono tracking-wider">{contract.contractNumber}</p>

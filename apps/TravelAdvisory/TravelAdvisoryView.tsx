@@ -2,13 +2,12 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { TravelAdvisory } from '../../modules/types';
 import { fetchTravelAdvisories } from '../../services/mockDataService';
 import Button from '../../components/Button';
-import { ArrowDownTrayIcon } from '../../icons/ArrowDownTrayIcon';
-import { DocumentDuplicateIcon } from '../../icons/DocumentDuplicateIcon';
 import TravelAdvisoryCard from './TravelAdvisoryCard';
 import TravelAdvisoryCardSkeleton from './TravelAdvisoryCardSkeleton';
 import TravelAdvisoryFilter from './TravelAdvisoryFilter';
 import Pagination from '../../components/Pagination';
 import { PAGE_SIZE } from '../../constants';
+import {ChevronDown,Copy} from 'lucide-react';
 
 const TravelAdvisoriesView: React.FC = () => {
   const [data, setData] = useState<TravelAdvisory[]>([]);
@@ -101,11 +100,11 @@ const TravelAdvisoriesView: React.FC = () => {
             <p className="text-slate-500 mt-1">Source: travel.state.gov (Emulated)</p>
           </div>
           <div className="flex space-x-2 mt-4 md:mt-0">
-              <Button onClick={handleFetch} disabled={loading} leftIcon={<ArrowDownTrayIcon className="w-5 h-5" />}>
+              <Button onClick={handleFetch} disabled={loading} leftIcon={<ChevronDown className="w-5 h-5" />}>
                   {loading ? 'Fetching...' : 'Refetch Data'}
               </Button>
               {filteredAndSortedData.length > 0 && (
-                  <Button onClick={handleDownload} variant="secondary" leftIcon={<DocumentDuplicateIcon className="w-5 h-5" />}>
+                  <Button onClick={handleDownload} variant="secondary" leftIcon={<Copy className="w-5 h-5" />}>
                       Download JSON
                   </Button>
               )}
