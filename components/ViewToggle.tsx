@@ -1,8 +1,9 @@
 import React from 'react';
 import DashboardIcon from '../icons/DashboardIcon';
 import ListIcon from '../icons/ListIcon';
+import {BarChart3} from 'lucide-react';
 
-type View = 'dashboard' | 'list';
+type View = 'dashboard' | 'list' | 'tile';
 
 interface ViewToggleProps {
   currentView: View;
@@ -11,8 +12,9 @@ interface ViewToggleProps {
 
 const ViewToggle: React.FC<ViewToggleProps> = ({ currentView, onViewChange }) => {
   const views: { id: View; icon: React.ElementType; label: string }[] = [
-    { id: 'dashboard', icon: DashboardIcon, label: 'Dashboard' },
+    { id: 'dashboard', icon: BarChart3, label: 'Dashboard' },
     { id: 'list', icon: ListIcon, label: 'List View' },
+    { id: 'tile', icon: DashboardIcon, label: 'Tile View' },
   ];
 
   return (
