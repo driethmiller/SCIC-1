@@ -17,3 +17,9 @@
 .DashBox {
     background-color: lightgrey
 }
+
+.SidebarSubtext{
+    font-size: 12px;
+    min-width: 190px;
+}
+

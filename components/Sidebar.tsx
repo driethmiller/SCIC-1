@@ -1,6 +1,6 @@
 import React from 'react';
 import { ViewType } from '../modules/types';
-import { Users, Globe, Building2, ChevronsLeft, Activity, MapPin, BarChart3, PieChart, History, List, Box } from 'lucide-react';
+import { Users, Globe, Building2, ChevronsLeft, Scroll, NotepadText, Plane, Eye, Microscope, BookAlert, ReceiptText, PieChart, History, List, Box } from 'lucide-react';
 import Meatball from '../icons/Meatball';
 
 interface SidebarProps {
@@ -14,6 +14,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapse
   const navItems = [
     { id: 'Suppliers', label: 'Suppliers', icon: <Building2 className="w-6 h-6" /> },
     { id: 'TravelAdvisories', label: 'Travel Advisories', icon: <Globe className="w-6 h-6" /> },
+    { id: 'Contracts', label: 'Contracts', icon: <Scroll className="w-6 h-6" /> },
+    { id: 'SCQA', label: 'SCQA', icon: <NotepadText className="w-6 h-6" />, subtext: 'Supply Chain Quality Assessments' },
+    { id: 'SCRA', label: 'SCRA', icon: <Microscope className="w-6 h-6" />, subtext: 'Supply Chain Research & Analysis' },
+    { id: 'SCV', label: 'SCV', icon: <Eye className="w-6 h-6" />, subtext: 'Supply Chain Visibility' },
+    { id: 'CARITL', label: 'CARITL', icon: <BookAlert className="w-6 h-6" />, subtext: 'Critical At-Risk Industrial Tech List' },
+    { id: 'CAAS', label: 'CAAS', icon: <ReceiptText className="w-6 h-6" />, subtext: 'Contract Admin & Audit Services' },
+    //{ id: 'CSIB', label: 'CSIB', icon: <Building2 className="w-6 h-6" />, subtext: 'Civil Space Industrial Base' },
+    { id: 'AO-CAS', label: 'AO-CAS', icon: <Plane className="w-6 h-6" />, subtext: 'Aircraft Operations - Commercial Aviation Services' },
+    { id: 'IAOP', label: 'IAOP', icon: <Plane className="w-6 h-6" />, subtext: 'Inter-Center Aircraft Operations Panel' },
   ];
 
   return (
@@ -36,8 +45,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView, isCollapse
               }`}
               title={item.label}
             >
+
               <div className="flex-shrink-0">{item.icon}</div>
+              <div>
               {!isCollapsed && <span className="whitespace-nowrap">{item.label}</span>}
+              {!isCollapsed && <div className="SidebarSubtext">{item.subtext}</div>}
+
+              
+              </div>
             </button>
           </li>
         ))}
